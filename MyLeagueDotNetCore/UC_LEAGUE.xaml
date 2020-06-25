@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="GUI.UC_LEAGUE"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"         
+             mc:Ignorable="d" 
+             d:DesignHeight="680" d:DesignWidth="1280" Foreground="{x:Null}" Background="#19FFFFFF" >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="640"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Height="40" HorizontalAlignment="Right" Margin="0,0,20,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"></ColumnDefinition>
+                <ColumnDefinition Width="980"></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <StackPanel VerticalAlignment="Top" Margin="10 0" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <ListViewItem HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0">
+                        <StackPanel>
+                            <Button x:Name="General" Uid="0" Width="140" Content="GENERAL" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click" Padding="16,4" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0">
+                        <StackPanel>
+                            <Button x:Name="Clubs" Uid="1" Width="140" Content="CLUBS" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" Grid.IsSharedSizeScope="True" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <StackPanel>
+                            <Button x:Name="Fixtures" Uid="2" Width="140" Content="FIXTURES" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0">
+                        <StackPanel>
+                            <Button x:Name="Results" Uid="3" Width="140" Content="RESULTS" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0">
+                        <StackPanel>
+                            <Button x:Name="Player" Uid="4" Width="140" Content="PLAYERS" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}">
+                        <StackPanel >
+                            <Button x:Name="Tables" Uid="5" Width="140" Content="TABLES" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="Settings" Uid="6" Width="140" Content="SETTING" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                </StackPanel>
+                <Grid x:Name="GridCursor" Width="140" Height="5" HorizontalAlignment="Left" Margin="10,-15,10,0" VerticalAlignment="Bottom">
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                            <GradientStop Color="#FF5F2BBB" Offset="0"/>
+                            <GradientStop Color="#FFEE1BEE" Offset="0.695"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="0" HorizontalAlignment="Left" Margin="20,0,0,0">
+                <StackPanel  HorizontalAlignment="Left" Width="50" Height="50">
+                    <Button x:Name="ArrowLeft" Click="ArrowLeft_Click" Width="50" Height="50" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" >
+                        <materialDesign:PackIcon Kind="ArrowLeft" Width="30" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+
+
+        <Grid Grid.Row="1" x:Name="GridMain" Height="640" Width="1280" VerticalAlignment="Top" Background="White" >
+
+        </Grid>
+
+    </Grid>
+</UserControl>

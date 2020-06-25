@@ -1,0 +1,111 @@
+﻿<UserControl x:Class="GUI.UC_ALLCLUB"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="640" d:DesignWidth="1280">
+    <Grid>
+        <Grid Height="640" Width="1280">
+            <ScrollViewer Foreground="{x:Null}">
+                <StackPanel>
+                    <StackPanel Margin="20,30,20,0">
+                        <ItemsControl x:Name="ListViewClubs" ItemsSource="{Binding Club}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="10">
+                                        <materialDesign:Card  materialDesign:ShadowAssist.ShadowDepth="Depth5"
+                                            Width="220" 
+                                            Background="{Binding BackGround}">
+                                            <Grid Width="220" Height="256">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="100" />
+                                                    <RowDefinition Height="100" />
+                                                    <RowDefinition Height="auto" />
+                                                </Grid.RowDefinitions>
+                                                <Image 
+                    Source="{Binding CoverImage}"
+                    Height="100"
+                    Stretch="UniformToFill" />
+                                                <Grid Grid.Row="0" HorizontalAlignment="Center"
+                                    VerticalAlignment="Bottom"
+                                    Margin="0,0,0,-20" 
+                                    Width="90" Height="90">
+                                                    <Border CornerRadius="55" BorderBrush="White" Background="White"/>
+
+
+                                                    <!--<Image Source="Liverpool.png" Width="70" Height="70"/>-->
+                                                    <Ellipse Width="70" Height="70" StrokeThickness="0.5" Stroke="White" >
+                                                        <Ellipse.Fill>
+                                                            <ImageBrush ImageSource="{Binding Logo}" Stretch="UniformToFill"/>
+                                                        </Ellipse.Fill>
+                                                    </Ellipse>
+                                                </Grid>
+
+                                                <StackPanel
+      Grid.Row="1"
+      Margin="0 24 0 4">
+                                                    <TextBlock
+                                            Margin="0" 
+                                            TextAlignment="Center" 
+                                            FontSize="18" FontWeight="Bold" Foreground="White" 
+                                             Text="{Binding ClubName}"  
+                                                FontFamily="Calibri">
+
+                                                    </TextBlock>
+                                                    <Viewbox
+        Margin="0,8"
+        Height="16"
+        HorizontalAlignment="Center">
+                                                        <materialDesign:RatingBar
+          Value="5"
+          Orientation="Horizontal"
+          Foreground="Gold"
+          Margin="0" VerticalContentAlignment="Center" />
+                                                    </Viewbox>
+                                                    <TextBlock
+        Style="{StaticResource MaterialDesignBody1TextBlock}"
+        TextWrapping="Wrap"
+        VerticalAlignment="Center" Text="{Binding Stadium}"
+                                             TextAlignment="Center" FontSize="14" FontFamily="Calibri" Foreground="White">
+
+                                                    </TextBlock>
+                                                </StackPanel>
+                                                <StackPanel
+      Grid.Row="2">
+                                                    <Button
+        Style="{StaticResource MaterialDesignRaisedLightButton}"
+        HorizontalAlignment="Center"
+         
+    ToolTip="MaterialDesignRaisedDarkButton with Round Corners"
+        Margin="8,16,0,8" 
+        Background="{x:Null}" BorderBrush="White" >
+
+                                                        <TextBlock Foreground="#DDFFFFFF">
+                            Club Profile
+                                                        </TextBlock>
+                                                    </Button>
+                                                </StackPanel>
+                                            </Grid>
+                                        </materialDesign:Card>
+
+                                    </Grid>
+
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+
+    </Grid>
+</UserControl>

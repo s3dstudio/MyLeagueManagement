@@ -1,0 +1,152 @@
+﻿<UserControl x:Class="GUI.UC_TABLES"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GUI"
+            
+             mc:Ignorable="d" 
+             d:DesignHeight="640" d:DesignWidth="1280">
+
+    <Grid>
+        <Grid Width="1000" Height="auto" Margin="0 60 0 0" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <!--<Grid Grid.Column="0" Height="auto">
+                <ListView Name="ListViewPos"  
+                      Foreground="#DD000000" 
+                      Background="{x:Null}" 
+                      BorderBrush="#896C6767" 
+                      VerticalContentAlignment="Stretch" 
+                      VerticalAlignment="Top" 
+                      HorizontalContentAlignment="Stretch" 
+                      HorizontalAlignment="Left">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Width="80"  >
+                                <GridViewColumnHeader Content="Position" Foreground="#BC2E2E2E" />
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Height="50" Text="{Binding}" FontWeight="Bold" HorizontalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>-->
+            <Grid Grid.Column="1" Height="auto">
+                <ListView Name="ListViewTable" 
+                      Foreground="#DD000000" 
+                      Background="{x:Null}" 
+                      BorderBrush="#896C6767" 
+                      VerticalContentAlignment="Stretch" 
+                      VerticalAlignment="Top" 
+                      HorizontalContentAlignment="Stretch" 
+                      HorizontalAlignment="Left" >
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn>
+                                <GridViewColumnHeader Width="80" Content="Position" Foreground="#BC2E2E2E" HorizontalAlignment="Left">
+                                </GridViewColumnHeader>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Position}"  FontWeight="Bold"></TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="40" >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image Source="{Binding Logo}"></Image>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="170"  DisplayMemberBinding="{Binding ClubName}">
+                                <GridViewColumnHeader Content="Club" Foreground="#BC2E2E2E" />
+                            </GridViewColumn>
+                            <GridViewColumn Width="80">
+                                <GridViewColumnHeader Content="Played" Foreground="#BC2E2E2E" HorizontalAlignment="Left" >
+                                </GridViewColumnHeader>
+                                <GridViewColumn.CellTemplate >
+                                    <DataTemplate >
+                                        <TextBlock Text="{Binding Plays}"  ></TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="80">
+                                <GridViewColumnHeader Content="Won" Foreground="#BC2E2E2E" HorizontalAlignment="Left" >
+                                </GridViewColumnHeader>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate >
+                                        <TextBlock Text="{Binding Won}"  HorizontalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="80">
+                                <GridViewColumnHeader Content="Drawn" Foreground="#BC2E2E2E" HorizontalAlignment="Left" >
+                                </GridViewColumnHeader>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Drawn}"  HorizontalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="80">
+                                <GridViewColumnHeader Content="Lost" Foreground="#BC2E2E2E" HorizontalAlignment="Left" />
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Lost}"  HorizontalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="80">
+                                <GridViewColumnHeader Content="GF" Foreground="#BC2E2E2E" HorizontalAlignment="Left" >
+                                </GridViewColumnHeader>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding GF}"  HorizontalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="80" >
+                                <GridViewColumnHeader Content="GA" Foreground="#BC2E2E2E" HorizontalAlignment="Left" >
+                                </GridViewColumnHeader>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding GA}"  HorizontalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="80" >
+                                <GridViewColumnHeader Content="GD" Foreground="#BC2E2E2E" HorizontalAlignment="Left" >
+                                </GridViewColumnHeader>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding GD}"  HorizontalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="80" >
+                                <GridViewColumnHeader Content="Points" Foreground="#BC2E2E2E" HorizontalAlignment="Left" >
+                                </GridViewColumnHeader>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Points}" FontWeight="Bold" HorizontalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+
+                </ListView>
+            </Grid>
+
+
+        </Grid>
+
+    </Grid>
+</UserControl>
