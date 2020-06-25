@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "3BwjKaSDGjv3NLxIKI3AgiUfi50ThgqvjoZwVUlaZqj08joq6tittL8Kt8uXCPXhbbCw0pKs4MU3GgmNc15MFQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DUYSIEUDEPTRAI\\Desktop\\git\\Server\\MyLeagueManagementServer\\MyLeagueManagementServer\\MyLeagueManagementServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DUYSIEUDEPTRAI\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
