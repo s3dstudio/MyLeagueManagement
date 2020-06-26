@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3BwjKaSDGjv3NLxIKI3AgiUfi50ThgqvjoZwVUlaZqj08joq6tittL8Kt8uXCPXhbbCw0pKs4MU3GgmNc15MFQ==",
+  "dgSpecHash": "8GK2xF24n9sLpEjC05a31xQqqiwu6eeGcBdgQ/+Z4gatS2tke5d5evXJkqX0Rw/DCwE5rIs+cZL7xEh4wo2/Lw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DUYSIEUDEPTRAI\\Desktop\\git\\Server\\MyLeagueManagementServer\\MyLeagueManagementServer\\MyLeagueManagementServer.csproj",
+  "projectFilePath": "D:\\VS Code\\Do An IT008\\Git\\MyLeagueManagement\\MyLeagueManagementServer\\MyLeagueManagementServer\\MyLeagueManagementServer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\DUYSIEUDEPTRAI\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\THAM MINH DUC\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }

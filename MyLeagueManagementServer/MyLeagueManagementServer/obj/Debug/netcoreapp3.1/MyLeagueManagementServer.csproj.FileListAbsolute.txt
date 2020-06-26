@@ -20,3 +20,25 @@ C:\Users\DUYSIEUDEPTRAI\Desktop\git\Server\MyLeagueManagementServer\MyLeagueMana
 C:\Users\DUYSIEUDEPTRAI\Desktop\git\Server\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.dll
 C:\Users\DUYSIEUDEPTRAI\Desktop\git\Server\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.pdb
 C:\Users\DUYSIEUDEPTRAI\Desktop\git\Server\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.genruntimeconfig.cache
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\bin\Debug\netcoreapp3.1\appsettings.json
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\bin\Debug\netcoreapp3.1\MyLeagueManagementServer.exe
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\bin\Debug\netcoreapp3.1\MyLeagueManagementServer.deps.json
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\bin\Debug\netcoreapp3.1\MyLeagueManagementServer.runtimeconfig.json
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\bin\Debug\netcoreapp3.1\MyLeagueManagementServer.runtimeconfig.dev.json
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\bin\Debug\netcoreapp3.1\MyLeagueManagementServer.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\bin\Debug\netcoreapp3.1\MyLeagueManagementServer.pdb
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.csprojAssemblyReference.cache
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.AssemblyInfoInputs.cache
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.AssemblyInfo.cs
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.csproj.CoreCompileInputs.cache
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.MvcApplicationPartsAssemblyInfo.cache
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.RazorTargetAssemblyInfo.cache
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.csproj.CopyComplete
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\staticwebassets\MyLeagueManagementServer.StaticWebAssets.Manifest.cache
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\staticwebassets\MyLeagueManagementServer.StaticWebAssets.xml
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.pdb
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.genruntimeconfig.cache
