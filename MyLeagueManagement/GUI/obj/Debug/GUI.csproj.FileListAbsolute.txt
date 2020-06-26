@@ -1,0 +1,91 @@
+D:\MyLeagueManagement\GUI\bin\Debug\GUI.exe.config
+D:\MyLeagueManagement\GUI\bin\Debug\GUI.exe
+D:\MyLeagueManagement\GUI\bin\Debug\GUI.pdb
+D:\MyLeagueManagement\GUI\bin\Debug\FireSharp.dll
+D:\MyLeagueManagement\GUI\bin\Debug\FireSharp.Serialization.JsonNet.dll
+D:\MyLeagueManagement\GUI\bin\Debug\MaterialDesignColors.dll
+D:\MyLeagueManagement\GUI\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\MyLeagueManagement\GUI\bin\Debug\Newtonsoft.Json.dll
+D:\MyLeagueManagement\GUI\bin\Debug\RestSharp.dll
+D:\MyLeagueManagement\GUI\bin\Debug\MaterialDesignColors.pdb
+D:\MyLeagueManagement\GUI\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\MyLeagueManagement\GUI\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\MyLeagueManagement\GUI\bin\Debug\Newtonsoft.Json.xml
+D:\MyLeagueManagement\GUI\bin\Debug\RestSharp.xml
+D:\MyLeagueManagement\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+D:\MyLeagueManagement\GUI\obj\Debug\MainWindow.g.cs
+D:\MyLeagueManagement\GUI\obj\Debug\App.g.cs
+D:\MyLeagueManagement\GUI\obj\Debug\GUI_MarkupCompile.cache
+D:\MyLeagueManagement\GUI\obj\Debug\GUI_MarkupCompile.lref
+D:\MyLeagueManagement\GUI\obj\Debug\App.baml
+D:\MyLeagueManagement\GUI\obj\Debug\MainWindow.baml
+D:\MyLeagueManagement\GUI\obj\Debug\GUI.g.resources
+D:\MyLeagueManagement\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\MyLeagueManagement\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\MyLeagueManagement\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\MyLeagueManagement\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\MyLeagueManagement\GUI\obj\Debug\GUI.exe
+D:\MyLeagueManagement\GUI\obj\Debug\GUI.pdb
+D:\MyLeagueManagement\GUI\obj\Debug\HOME.g.cs
+D:\MyLeagueManagement\GUI\obj\Debug\HOME.baml
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\UC_LEAGUE.baml
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\HOME.g.cs
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\MainWindow.g.cs
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\UC_ALLCLUB.g.cs
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\UC_ALLLEAGUE.g.cs
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\UC_LEAGUE.g.cs
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\App.g.cs
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\GUI_MarkupCompile.cache
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\GUI_MarkupCompile.lref
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\GUI.exe
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\GUI.pdb
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\GUI.exe.config
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\GUI.exe
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\GUI.pdb
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\BLL.dll
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\DAL.dll
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\DTO.dll
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\FireSharp.dll
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\FireSharp.Serialization.JsonNet.dll
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\MaterialDesignColors.dll
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\RestSharp.dll
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\BLL.pdb
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\DAL.pdb
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\DTO.pdb
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\RestSharp.xml
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\UC_FIXTURES.g.cs
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\UC_TABLES.g.cs
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\App.baml
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\HOME.baml
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\MainWindow.baml
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\UC_ALLCLUB.baml
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\UC_ALLLEAGUE.baml
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\UC_FIXTURES.baml
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\UC_TABLES.baml
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\GUI.g.resources
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\UC_ALLPLAYER.g.cs
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\UC_RESULTS.g.cs
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\UC_ALLPLAYER.baml
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\UC_RESULTS.baml
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\ExPlayer.g.cs
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\ExPlayer.baml
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\ucccExxx.g.cs
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\ucccExxx.baml
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\Firebase.Storage.dll
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\BLL.dll.config
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\DAL.dll.config
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\DTO.dll.config
+C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\System.Diagnostics.DiagnosticSource.xml
