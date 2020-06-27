@@ -20,3 +20,25 @@ C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\DTO\bin\Debug\DTO.dll.config
 C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\DTO\bin\Debug\Firebase.Storage.dll
 C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\DTO\bin\Debug\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\DTO\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\DTO.dll.config
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\DTO.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\DTO.pdb
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\Firebase.Storage.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\FireSharp.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\FireSharp.Serialization.JsonNet.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\MaterialDesignColors.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\Newtonsoft.Json.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\RestSharp.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\MaterialDesignColors.pdb
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\Newtonsoft.Json.xml
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\RestSharp.xml
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\obj\Debug\DTO.csproj.CopyComplete
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\obj\Debug\DTO.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\obj\Debug\DTO.pdb

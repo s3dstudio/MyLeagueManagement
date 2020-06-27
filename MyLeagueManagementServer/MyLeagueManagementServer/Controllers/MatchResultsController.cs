@@ -24,6 +24,7 @@ namespace MyLeagueManagementServer.Controllers
             matchResults.get(out result);
             return Ok(result);
         }
+        [HttpPost]
         public IActionResult Post([FromBody] MatchResultsDTO matchResult)
         {
             connect.ConnectFirebase();

@@ -89,3 +89,22 @@ C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\BLL.dll.config
 C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\DAL.dll.config
 C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\DTO.dll.config
 C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_LEAGUE.baml
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\ExPlayer.g.cs
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\HOME.g.cs
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\MainWindow.g.cs
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\ucccExxx.g.cs
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_ALLCLUB.g.cs
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_ALLLEAGUE.g.cs
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_ALLPLAYER.g.cs
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_FIXTURES.g.cs
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_LEAGUE.g.cs
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_RESULTS.g.cs
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_TABLES.g.cs
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\App.g.cs
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI_MarkupCompile.cache
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI_MarkupCompile.lref
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI.exe
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI.pdb

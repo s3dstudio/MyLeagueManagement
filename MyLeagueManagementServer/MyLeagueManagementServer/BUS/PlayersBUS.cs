@@ -52,11 +52,11 @@ namespace MyLeagueManagementServer.BUS
             Console.WriteLine(firebaseDBTeams.ToString());
             Console.ReadLine();
         }
-        public void put(ref string serial)
+        public void put(ref string serial,string para)
         {
 
             FirebaseDB firebaseDB = new FirebaseDB(CONSTANT.FIREBASE_URL);
-            FirebaseDB firebaseDBTeams = firebaseDB.Node("Players");
+            FirebaseDB firebaseDBTeams = firebaseDB.NodePath("Players/"+para);
             Console.WriteLine("PUT Request");
             FirebaseResponse putResponse = firebaseDBTeams.Put(serial);
             Console.WriteLine(putResponse.Success);

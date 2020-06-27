@@ -24,12 +24,24 @@ namespace MyLeagueManagementServer.Controllers
             players.get(out result);
             return Ok(result);
         }
+        [HttpPost]
         public IActionResult Post([FromBody] PlayersDTO player)
         {
             connect.ConnectFirebase();
             PlayersBUS players = new PlayersBUS();
-            string jsonData = @"{'ID':'" + player.ID + "','Name':'" + player.Name + "','Birth':'" + player.Birth + "','Key_Type':'" + player.Key_Type + "','Goals':'" + player.Goals + "','Teams_Key':'" + player.Teams_Key + "'}";
+            string jsonData = @"{'ID':'" + player.ID + "','Name':'" + player.Name + "','DoB':'" + player.DoB + "','Key_Type':'" + player.Key_Type + "','AllGoal':'" + player.AllGoal + "','Teams_Key':'" + 
+                player.Teams_Key + "','Position':'"+player.Position+ "','Nationality':'"+player.Nationality+"','Image':'"+player.Image +"','Number':'"+player.Number+ "'}";
             players.post(ref jsonData);
+            return Ok(player);
+        }
+        [HttpPut]
+        public IActionResult Put([FromBody] PlayersDTO player)
+        {
+            connect.ConnectFirebase();
+            PlayersBUS players = new PlayersBUS();
+            string jsonData = @"{'ID':'" + player.ID + "','Name':'" + player.Name + "','DoB':'" + player.DoB + "','Key_Type':'" + player.Key_Type + "','AllGoal':'" + player.AllGoal + "','Teams_Key':'" +
+                player.Teams_Key + "','Position':'" + player.Position + "','Nationality':'" + player.Nationality + "','Image':'" + player.Image + "','Number':'" + player.Number + "'}";
+            players.put(ref jsonData,player.Teams_Key);
             return Ok(player);
         }
     }
