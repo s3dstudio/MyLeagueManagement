@@ -31,7 +31,7 @@
                             </Grid.RowDefinitions>
                             <Grid Grid.Row="0">
                                 <Grid.Background>
-                                    <ImageBrush x:Name="Img_League_Cover" ImageSource="1-12.jpg" Stretch="UniformToFill"/>
+                                    <ImageBrush x:Name="Img_League_Cover" ImageSource="zozd74mt2nl41.jpg" Stretch="UniformToFill"/>
                                 </Grid.Background>
                                 <Grid  Height="60"  VerticalAlignment="Bottom" Margin="260,0,0,0">
                                     <TextBlock x:Name="League_Name" FontSize="29" Text="Premier League" Foreground="White"></TextBlock>
@@ -43,7 +43,7 @@
 
                             <Ellipse x:Name="Img_LogoC" Grid.Row="0"  Width="180" Height="180" StrokeThickness="1" Stroke="#FFC7C7C7" Margin="40,0,0,-220" HorizontalAlignment="Left" >
                                 <Ellipse.Fill>
-                                    <ImageBrush x:Name="Img_Logo" ImageSource="Everton.png" Stretch="UniformToFill"/>
+                                    <ImageBrush x:Name="Img_Logo" ImageSource="pre.png" Stretch="UniformToFill"/>
                                 </Ellipse.Fill>
                             </Ellipse>
 
