@@ -64,3 +64,17 @@ C:\Users\Sang Minh\Desktop\loz\MyLeagueManagement\MyLeagueManagement\DTO\obj\Deb
 C:\Users\Sang Minh\Desktop\loz\MyLeagueManagement\MyLeagueManagement\DTO\obj\Debug\DTO.csproj.CopyComplete
 C:\Users\Sang Minh\Desktop\loz\MyLeagueManagement\MyLeagueManagement\DTO\obj\Debug\DTO.dll
 C:\Users\Sang Minh\Desktop\loz\MyLeagueManagement\MyLeagueManagement\DTO\obj\Debug\DTO.pdb
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\Microsoft.Net.Http.Headers.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Buffers.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Memory.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Net.Http.Formatting.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Numerics.Vectors.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\Microsoft.Net.Http.Headers.xml
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Buffers.xml
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Memory.xml
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Net.Http.Formatting.xml
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Numerics.Vectors.xml
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml

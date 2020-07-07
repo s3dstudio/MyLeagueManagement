@@ -33,8 +33,6 @@ D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueM
 D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.csprojAssemblyReference.cache
 D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.AssemblyInfoInputs.cache
 D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.AssemblyInfo.cs
-D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.csproj.CoreCompileInputs.cache
-D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.MvcApplicationPartsAssemblyInfo.cache
 D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.RazorTargetAssemblyInfo.cache
 D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.csproj.CopyComplete
 D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\staticwebassets\MyLeagueManagementServer.StaticWebAssets.Manifest.cache
@@ -42,3 +40,5 @@ D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueM
 D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.dll
 D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.pdb
 D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.genruntimeconfig.cache
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.csproj.CoreCompileInputs.cache
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagementServer\MyLeagueManagementServer\obj\Debug\netcoreapp3.1\MyLeagueManagementServer.MvcApplicationPartsAssemblyInfo.cache

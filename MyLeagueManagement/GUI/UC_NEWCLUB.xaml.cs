@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Controls;
 using System.Windows.Shapes;
 using System.ComponentModel;
+using DTO;
 
 namespace GUI
 {
@@ -26,8 +27,8 @@ namespace GUI
         public string tempcoverclub = null;
         public string templogoclub = null;
 
-        private Club myclub;
-        public Club MyClub
+        private ClubsDTO myclub;
+        public ClubsDTO MyClub
         {
             get { return this.myclub; }
             set
@@ -48,7 +49,7 @@ namespace GUI
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public UC_NEWCLUB(Club abc)
+        public UC_NEWCLUB(ClubsDTO abc)
         {
             this.MyClub = abc;
             InitializeComponent();
