@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\obj\Debug\
+C:\Users\Sang Minh\Desktop\loz\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\
 GUI
 none
 false
 DEBUG;TRACE
-C:\Users\Sang Minh\Desktop\git\MyLeagueManagement\GUI\App.xaml
-11-1131564333
+C:\Users\Sang Minh\Desktop\loz\MyLeagueManagement\MyLeagueManagement\GUI\App.xaml
+141835554565
 
-23-596149712
-133-1804453260
-ExPlayer.xaml;HOME.xaml;MainWindow.xaml;ucccExxx.xaml;UC_ALLCLUB.xaml;UC_ALLLEAGUE.xaml;UC_ALLPLAYER.xaml;UC_FIXTURES.xaml;UC_LEAGUE.xaml;UC_RESULTS.xaml;UC_TABLES.xaml;
+26-1820926391
+131-168886579
+ExPlayer.xaml;HOME.xaml;MainWindow.xaml;ucccExxx.xaml;UC_ALLCLUB.xaml;UC_ALLLEAGUE.xaml;UC_ALLPLAYER.xaml;UC_FIXTURES.xaml;UC_LEAGUE.xaml;UC_MYLEAGUES.xaml;UC_NEWCLUB.xaml;UC_NEWLEAGUE.xaml;UC_RESULTS.xaml;UC_TABLES.xaml;
 
-True
+False
 

@@ -49,7 +49,8 @@ namespace GUI
         private void MyLeagues_Click(object sender, RoutedEventArgs e)
         {
             //UC_ALLLEAGUE l = new UC_ALLLEAGUE();
-             UC_LEAGUE l = new UC_LEAGUE();
+            //UC_LEAGUE l = new UC_LEAGUE();
+            UC_MYLEAGUES l = new UC_MYLEAGUES();
             GridMain.Children.Clear();
            GridMain.Children.Add(l);
 

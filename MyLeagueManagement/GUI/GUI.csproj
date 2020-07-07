@@ -238,6 +238,15 @@
     <Compile Include="UC_LEAGUE.xaml.cs">
       <DependentUpon>UC_LEAGUE.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UC_MYLEAGUES.xaml.cs">
+      <DependentUpon>UC_MYLEAGUES.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NEWCLUB.xaml.cs">
+      <DependentUpon>UC_NEWCLUB.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NEWLEAGUE.xaml.cs">
+      <DependentUpon>UC_NEWLEAGUE.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UC_RESULTS.xaml.cs">
       <DependentUpon>UC_RESULTS.xaml</DependentUpon>
     </Compile>
@@ -288,6 +297,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UC_LEAGUE.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC_MYLEAGUES.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC_NEWCLUB.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC_NEWLEAGUE.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

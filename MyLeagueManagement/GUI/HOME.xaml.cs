@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DAL;
+//using DAL;
 
 namespace GUI
 {
@@ -21,26 +21,26 @@ namespace GUI
     /// </summary>
     public partial class HOME : UserControl
     {
-        ConnectDatabase connectDatabase = new ConnectDatabase();
-        ConnectStorage connectStorage = new ConnectStorage();
+      //  ConnectDatabase connectDatabase = new ConnectDatabase();
+      //  ConnectStorage connectStorage = new ConnectStorage();
         public HOME()
         {
             InitializeComponent();
-            try
-            {
-                connectDatabase.Load();
-            }
-            catch
-            {
-                if (connectDatabase.client == null)
-                {
-                    MessageBox.Show("Connection failed!");
-                }
-            }
-            if (connectDatabase.client != null)
-            {
-                MessageBox.Show("Connection is established!");
-            }
+            //try
+            //{
+            //    connectDatabase.Load();
+            //}
+            //catch
+            //{
+            //    if (connectDatabase.client == null)
+            //    {
+            //        MessageBox.Show("Connection failed!");
+            //    }
+            //}
+            //if (connectDatabase.client != null)
+            //{
+            //    MessageBox.Show("Connection is established!");
+            //}
         }
         
     }
