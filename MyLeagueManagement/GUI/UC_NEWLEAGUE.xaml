@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GUI"
+             xmlns:domain="clr-namespace:GUI.Domain"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="680" >
@@ -17,39 +18,44 @@
         </ResourceDictionary>
     </UserControl.Resources>
     <materialDesign:DialogHost>
-        <Grid  Height="680"  Width="900" Background="#FFC5C5C5">
+        <Grid  Height="680"  Width="900" Background="#FFE6E6E6">
             <ScrollViewer x:Name="Scrollv" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" VerticalAlignment="Top">
                 <StackPanel>
-                    <materialDesign:Card Margin="0 10 0 0"
-                     Height="400"
+                    <materialDesign:Card Margin="0 20 0 0"
+                     Height="500"
                     materialDesign:ShadowAssist.ShadowDepth="Depth0"
                     UniformCornerRadius="20" Background="White">
-                        <Grid Height="400" >
+                        <Grid Height="500" >
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="310"/>
+                                <RowDefinition Height="340"/>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
                             <Grid Grid.Row="0">
-                                <Grid.Background>
-                                    <ImageBrush x:Name="Img_League_Cover" ImageSource="zozd74mt2nl41.jpg" Stretch="UniformToFill"/>
-                                </Grid.Background>
-                                <Grid  Height="60"  VerticalAlignment="Bottom" Margin="260,0,0,0">
-                                    <TextBlock x:Name="League_Name" FontSize="29" Text="Premier League" Foreground="White"></TextBlock>
-                                    <Button x:Name="Btn_Add_League_Cover" Click="Btn_Add_League_Cover_Click" Width="40" Height="40" Margin="0,0,20,20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Padding="0" HorizontalAlignment="Right" >
-                                        <materialDesign:PackIcon Width="35" Height="35" Kind="Pencil" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                                    </Button>
-                                </Grid>
-                            </Grid>
 
-                            <Ellipse x:Name="Img_LogoC" Grid.Row="0"  Width="180" Height="180" StrokeThickness="1" Stroke="#FFC7C7C7" Margin="40,0,0,-220" HorizontalAlignment="Left" >
+                                <Image x:Name="Img_League_Cover" Source="{Binding CoverImg, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Stretch="UniformToFill" Width="900" Height="340"/>
+                                
+                                <Button x:Name="Btn_Add_League_Cover" Click="Btn_Add_League_Cover_Click" Width="50" Height="50" materialDesign:ButtonAssist.CornerRadius="25" Margin="0,0,20,20" Background="#33FFFFFF" BorderBrush="{x:Null}" Foreground="{x:Null}" Padding="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+                                    <materialDesign:PackIcon Width="25" Height="25" Kind="Camera" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                                </Button>
+                            </Grid>
+                            <Grid x:Name="Img_LogoC"
+                                    Margin="360,0,0,-200"
+                                    Width="180" Height="180" HorizontalAlignment="Left">
+                                <Border x:Name="Img_Logo_Border" CornerRadius="90" BorderThickness="1"  BorderBrush="#FFBBBBBB" Background="White"/>
+
+
+                                <Image  x:Name="Img_Logo" Source="{Binding Logo, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Width="118" Height="118" Stretch="UniformToFill"/>
+
+                            </Grid>
+                            <!--<Ellipse x:Name="Img_LogoC" Grid.Row="0"  Width="180" Height="180" StrokeThickness="2" Stroke="#FFC7C7C7" Margin="360,0,0,-200" HorizontalAlignment="Left" >
                                 <Ellipse.Fill>
-                                    <ImageBrush x:Name="Img_Logo" ImageSource="pre.png" Stretch="UniformToFill"/>
+                                    <ImageBrush x:Name="Img_Logo" ImageSource="{Binding Logo, UpdateSourceTrigger=PropertyChanged}" Stretch="UniformToFill"/>
                                 </Ellipse.Fill>
-                            </Ellipse>
+                            </Ellipse>-->
 
 
                             <Button BorderThickness="0" x:Name="Btn_AddLogo" Click="Btn_AddLogo_Click"
-                                    Height="84" Width="168" Grid.Row="0" Margin="46,0,0,-304"
+                                    Height="84" Width="168" Grid.Row="0" Margin="366,0,0,-284"
                                     materialDesign:ButtonAssist.CornerRadius="0 0 84 84" HorizontalAlignment="Left"
                                     Background="#99000000">
                                 <materialDesign:PackIcon Kind="Camera" Width="35" Height="30"  />
@@ -83,25 +89,28 @@
                             </Button>
 
                             <Grid Grid.Row="1">
-                                <StackPanel VerticalAlignment="Bottom" Margin="60 0" Orientation="Horizontal" HorizontalAlignment="Left">
+                                <Separator VerticalAlignment="Bottom" Margin="0,0,0,70" Background="#FFE6E6E6"></Separator>
+                                <TextBlock x:Name="League_Name" FontSize="32" Text="{Binding ElementName=Tbx_LeagueName, Path=Text, UpdateSourceTrigger=LostFocus}" Foreground="Black" Height="40" HorizontalAlignment="Center" Width="294" TextAlignment="Center" VerticalAlignment="Top" Margin="0,30,0,0" FontFamily="Candara"/>
+
+                                <StackPanel VerticalAlignment="Bottom" Margin="20,0,60,0" Orientation="Horizontal" HorizontalAlignment="Left">
                                     <ListViewItem HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0">
                                         <StackPanel>
-                                            <Button x:Name="About" Uid="0" Width="140" Content="ABOUT" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF6E6E6E" Click="Button_Click" Padding="16,4" VerticalAlignment="Center" />
+                                            <Button x:Name="About" Uid="0" Width="100" Content="ABOUT" Height="55" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF6E6E6E" Click="Button_Click" Padding="16,10,16,4" VerticalAlignment="Center" VerticalContentAlignment="Top" />
                                         </StackPanel>
                                     </ListViewItem>
                                     <ListViewItem HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0">
                                         <StackPanel>
-                                            <Button x:Name="Settings" Uid="1" Width="140" Content="SETTINGS" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF6E6E6E" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            <Button x:Name="Settings" Uid="1" Width="100" Content="SETTINGS" Height="55" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF6E6E6E" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Top" Padding="16,10,16,4"/>
                                         </StackPanel>
                                     </ListViewItem>
                                     <ListViewItem HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" Grid.IsSharedSizeScope="True" VerticalAlignment="Center" HorizontalAlignment="Center">
                                         <StackPanel>
-                                            <Button x:Name="Clubs" Uid="2" Width="140" Content="CLUBS" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF6E6E6E" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            <Button x:Name="Clubs" Uid="2" Width="100" Content="CLUBS" Height="55" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF6E6E6E" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="16,10,16,4" VerticalContentAlignment="Top"/>
                                         </StackPanel>
                                     </ListViewItem>
 
                                 </StackPanel>
-                                <Grid x:Name="GridCursor" Width="140" Height="5" HorizontalAlignment="Left" Margin="60,-15,10,0" VerticalAlignment="Bottom">
+                                <Grid x:Name="GridCursor" Width="100" Height="5" HorizontalAlignment="Left" Margin="20,-15,10,0" VerticalAlignment="Bottom">
                                     <Grid.Background>
                                         <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
                                             <GradientStop Color="#FF5F2BBB" Offset="0"/>
@@ -109,6 +118,36 @@
                                         </LinearGradientBrush>
                                     </Grid.Background>
                                 </Grid>
+                                <Button Height="40" Content="ACTIVE LEAGUE" Name="Btn_Active_League" Click="Btn_Active_League_Click" Width="135" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,20,15" FontSize="14">
+                                    <Button.Style>
+                                        <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignRaisedLightButton}">
+                                            <Setter Property="Background" Value="{x:Null}"></Setter>
+                                            <Setter Property="materialDesign:ButtonAssist.CornerRadius" Value="20"></Setter>
+                                            <Setter Property="BorderBrush" Value="#FF6E6E6E"></Setter>
+                                            <Setter Property="Foreground" Value="#FF6E6E6E"></Setter>
+                                            <Setter Property="BorderThickness" Value="0.0053in"></Setter>
+                                            <Style.Triggers>
+                                                <MultiTrigger>
+                                                    <MultiTrigger.Conditions>
+                                                        <Condition  Property="IsMouseOver" Value="True"></Condition>
+                                                    </MultiTrigger.Conditions>
+                                                    <MultiTrigger.Setters>
+                                                        <Setter Property="Foreground" Value="White"></Setter>
+                                                        <Setter Property="BorderThickness" Value="0"></Setter>
+                                                        <Setter Property="Background">
+                                                            <Setter.Value>
+                                                                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                                                                    <GradientStop Color="#FF5F2BBB" Offset="0"/>
+                                                                    <GradientStop Color="#FFEE1BEE" Offset="0.695"/>
+                                                                </LinearGradientBrush>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </MultiTrigger.Setters>
+                                                </MultiTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
                             </Grid>
 
                         </Grid>
@@ -129,10 +168,10 @@
                                 <StackPanel Margin="40">
 
 
-                                    <TextBox x:Name="Tbx_LeagueName" Text="{Binding LeagueName, UpdateSourceTrigger=Explicit}" FontSize="18" materialDesign:HintAssist.Hint="League Name"
+                                    <TextBox x:Name="Tbx_LeagueName" Text="{Binding LeagueName, UpdateSourceTrigger=PropertyChanged}" FontSize="18" materialDesign:HintAssist.Hint="League Name"
                      materialDesign:HintAssist.HintOpacity=".6"       
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" BorderBrush="#899C9292" Margin="60,20,60,0" Background="#FFF3F3F3" />
-                                    <TextBox x:Name="Tbx_Nationality" Background="#FFF3F3F3"  FontSize="18" materialDesign:HintAssist.Hint="Nationality"
+                                    <TextBox x:Name="Tbx_Nationality" Text="{Binding Nationality, UpdateSourceTrigger=PropertyChanged}" Background="#FFF3F3F3"  FontSize="18" materialDesign:HintAssist.Hint="Nationality"
                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" BorderBrush="#899C9292" Margin="60,20,60,0" />
                                     <!--<ComboBox Width="400" Height="51" FontSize="18"
                       Margin="10,10,0,0"
@@ -155,7 +194,7 @@
                     Orange
                 </ComboBoxItem>
             </ComboBox>-->
-                                    <TextBox x:Name="Tbx_NumClub" Text="{Binding NumClub, UpdateSourceTrigger=Explicit}" FontSize="18" materialDesign:HintAssist.Hint="Number Of Clubs Attended"
+                                    <TextBox x:Name="Tbx_NumClub" Text="{Binding NumClub, UpdateSourceTrigger=PropertyChanged}" FontSize="18" materialDesign:HintAssist.Hint="Number Of Clubs Attended"
                      materialDesign:HintAssist.HintOpacity=".6"      
                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" Background="#FFF3F3F3" BorderBrush="#899C9292" Margin="60,20,60,0" />
 
@@ -179,6 +218,123 @@
                             </StackPanel>
                         </StackPanel>
                     </Grid>
+
+                    <Grid x:Name="Grid_Settings" Margin="0 30 0 0" Visibility="Visible">
+                        <StackPanel Margin="0,0,0,-80">
+
+
+                            <StackPanel >
+                                <TextBlock Width="100"  Margin="15 0 0 0" FontWeight="Bold" Text="Settings" FontSize="20" Foreground="Black" HorizontalAlignment="Left" />
+                                <TextBlock FontSize="16" Margin="15 0 0 0" Text="Edit your League Settings here" Foreground="#FF727272"/>
+                            </StackPanel>
+
+                            <materialDesign:Card x:Name="Card_Settings" 
+                     Height="1078" Margin="0 20 0 0"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                    UniformCornerRadius="20" Background="White">
+                                <StackPanel Margin="40,40,40,44">
+                                    <StackPanel x:Name="Club_Settings" Height="994">
+                                        <TextBlock Width="180"   FontWeight="Bold" Text="Club Settings" FontSize="25" Foreground="Black" HorizontalAlignment="Left" Margin="60,0,0,30" />
+                                        <TextBlock Width="180"  Margin="60 0 0 5"  Text="Age Requirement" FontSize="20" Foreground="#FF727272" HorizontalAlignment="Left" />
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBox  Text="{Binding MinAge, UpdateSourceTrigger=PropertyChanged}" FontSize="18" materialDesign:HintAssist.Hint="Minimum Age Requirement"
+                     materialDesign:HintAssist.HintOpacity=".6"       
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" BorderBrush="#899C9292" Margin="60,0,0,0" Background="#FFF3F3F3" Width="320" />
+                                            <TextBox  Text="{Binding MaxAge, UpdateSourceTrigger=PropertyChanged}" FontSize="18" materialDesign:HintAssist.Hint="Maximum Age Requirement"
+                     materialDesign:HintAssist.HintOpacity=".6"       
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" BorderBrush="#899C9292" Margin="60,0,0,0" Background="#FFF3F3F3" Width="320" />
+                                        </StackPanel>
+                                        <TextBlock Width="180"  Margin="60 30 0 5"  Text="Squad Requirement" FontSize="20" Foreground="#FF727272" HorizontalAlignment="Left" />
+
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBox  Text="{Binding MinSquadSize, UpdateSourceTrigger=PropertyChanged}" FontSize="18" materialDesign:HintAssist.Hint="Minimum Squad Size"
+                     materialDesign:HintAssist.HintOpacity=".6"       
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" BorderBrush="#899C9292" Margin="60,0,0,0" Background="#FFF3F3F3" Width="320" />
+                                            <TextBox  Text="{Binding MaxSquadSize, UpdateSourceTrigger=PropertyChanged}" FontSize="18" materialDesign:HintAssist.Hint="Maximum Squad Size"
+                     materialDesign:HintAssist.HintOpacity=".6"       
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" BorderBrush="#899C9292" Margin="60,0,0,0" Background="#FFF3F3F3" Width="320" />
+                                        </StackPanel>
+                                        <TextBlock Width="180"  Margin="60 30 0 5"  Text="Foreign Player" FontSize="20" Foreground="#FF727272" HorizontalAlignment="Left" />
+
+                                        <TextBox  Text="{Binding MaxForeign, UpdateSourceTrigger=PropertyChanged}" FontSize="18" materialDesign:HintAssist.Hint="Maximum  Player in Squad"
+                     materialDesign:HintAssist.HintOpacity=".6"       
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" BorderBrush="#899C9292" Margin="60,00,60,0" Background="#FFF3F3F3" Width="320" HorizontalAlignment="Left" />
+                                       
+                                        <TextBlock Width="180"   FontWeight="Bold" Text="Table Settings" FontSize="25" Foreground="Black" HorizontalAlignment="Left" Margin="60,30,0,30" />
+                                        <TextBlock Width="180"  Margin="60 0 0 5"  Text="Table Priority" FontSize="20" Foreground="#FF727272" HorizontalAlignment="Left" />
+                                        <ComboBox x:Name="Cbb_Priority" SelectedValue="{Binding Priority, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="60,0,0,0" Background="#FFF3F3F3"  FontSize="18"
+                            materialDesign:HintAssist.Hint="Priority" BorderBrush="#899C9292" Width="700" Height="51"
+                            materialDesign:HintAssist.HintOpacity=".6"
+                            IsEditable="True" HorizontalAlignment="Left">
+                                            <ComboBoxItem Width="700" Padding="0" Background="Black" BorderBrush="{x:Null}" Foreground="White" >
+                                                Point - Goal Diffrence - Away Goals - Head to Head
+                                            </ComboBoxItem>
+                                            <ComboBoxItem  Width="700" Padding="0" Background="Black" BorderBrush="{x:Null}" Foreground="White">
+                                                Point - Goal Diffrence - Head to Head - Away Goals
+                                            </ComboBoxItem>
+                                            <ComboBoxItem  Width="700" Padding="0" Background="Black" BorderBrush="{x:Null}" Foreground="White">
+                                                Point - Head to Head - Goal Diffrence - Away Goals
+                                            </ComboBoxItem>
+                                            <ComboBoxItem Width="700" Padding="0" Background="Black" BorderBrush="{x:Null}" Foreground="White">
+                                                Point - Head to Head - Away Goals - Goal Diffrence
+                                            </ComboBoxItem>
+                                            <ComboBoxItem Width="700" Padding="0" Background="Black" BorderBrush="{x:Null}" Foreground="White">
+                                                Point - Goal Diffrence - Head to Head - Away Goals
+                                            </ComboBoxItem>
+                                            <ComboBoxItem Width="700" Padding="0" Background="Black" BorderBrush="{x:Null}" Foreground="White">
+                                                Point - Goal Diffrence - Away Goals - Head to Head
+                                            </ComboBoxItem>
+                                            <ComboBox.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                    <VirtualizingStackPanel />
+                                                </ItemsPanelTemplate>
+                                            </ComboBox.ItemsPanel>
+                                        </ComboBox>
+                                        <TextBlock Width="180"   FontWeight="Bold" Text="Match Settings" FontSize="25" Foreground="Black" HorizontalAlignment="Left" Margin="60,30,0,30" />
+                                        <TextBlock Width="344"  Margin="60 0 0 5"  Text="Maximum Amount of Stoppage Time" FontSize="20" Foreground="#FF727272" HorizontalAlignment="Left" />
+                                        <StackPanel Height="56" Orientation="Horizontal">
+                                            <TextBlock Margin="60,0,0,0" Text="90+" FontSize="20" Width="35" VerticalAlignment="Center"></TextBlock>
+                                            <TextBlock  Text="{Binding ElementName=Stoppage, Path=Value}" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            <TextBlock  Text="'" FontSize="20" Width="35" VerticalAlignment="Center"></TextBlock>
+                                            <Slider x:Name="Stoppage" Margin="5,-25,60,0" Width="320" HorizontalAlignment="Left"
+                    Minimum="0" TickFrequency="1" 
+                    Maximum="45"
+                    Style="{StaticResource MaterialDesignDiscreteSlider}"
+                    ToolTip="MaterialDesignDiscreteSlider"
+                    Value="{Binding Stoppage, UpdateSourceTrigger=PropertyChanged}" BorderBrush="{x:Null}" Foreground="#FF17FF00" Height="65"/>
+                                            
+                                        </StackPanel>
+                                        <TextBox  Text="{Binding WinPoint, UpdateSourceTrigger=PropertyChanged}" FontSize="18" materialDesign:HintAssist.Hint="Win Point"
+                     materialDesign:HintAssist.HintOpacity=".6"       
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" BorderBrush="#899C9292" Margin="60,00,60,30" Background="#FFF3F3F3" Width="320" HorizontalAlignment="Left"  />
+                                        <TextBox  Text="{Binding DrawPoint, UpdateSourceTrigger=PropertyChanged}" FontSize="18" materialDesign:HintAssist.Hint="Draw Point"
+                     materialDesign:HintAssist.HintOpacity=".6"       
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" BorderBrush="#899C9292" Margin="60,00,60,30" Background="#FFF3F3F3" Width="320" HorizontalAlignment="Left" />
+                                        <TextBox  Text="{Binding LossPoint, UpdateSourceTrigger=PropertyChanged}" FontSize="18" materialDesign:HintAssist.Hint="Loss Point"
+                     materialDesign:HintAssist.HintOpacity=".6"       
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" BorderBrush="#899C9292" Margin="60,00,60,30" Background="#FFF3F3F3" Width="320" HorizontalAlignment="Left" />
+                                    </StackPanel>
+                                </StackPanel>
+                            </materialDesign:Card>
+                            <StackPanel  Margin="0,30,60,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                                <Button IsEnabled="False"
+  Style="{StaticResource MaterialDesignIconButton}"
+  ToolTip="MaterialDesignIconButton"
+  Background="#FFE8E8E8" Foreground="{x:Null}" HorizontalAlignment="Right">
+                                    <materialDesign:PackIcon
+    Kind="ChevronDoubleLeft" Foreground="#FF17FF00" />
+                                </Button>
+                                <Button Uid="1" Click="Button_Click" Margin="25 0 0 0"
+  Style="{StaticResource MaterialDesignIconButton}"
+  ToolTip="MaterialDesignIconButton"
+  Background="#FFE8E8E8" Foreground="{x:Null}" HorizontalAlignment="Right">
+                                    <materialDesign:PackIcon
+    Kind="ChevronDoubleRight" Foreground="#FF17FF00" />
+                                </Button>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+
 
                     <Grid x:Name="Grid_Clubs"  Margin=" 0 30 0 0 " Visibility="Visible">
                         <StackPanel>
@@ -246,15 +402,15 @@
                                         <TextBlock Width="100"  Margin="15 0 0 0" FontWeight="Bold" Text="All Club" FontSize="20" Foreground="Black" HorizontalAlignment="Left" />
                                         <TextBlock FontSize="16" Margin="15 0 0 0" Text="Modifi and Remove Club here" Foreground="#FF727272"/>
                                     </StackPanel>
-                                    <ListBox Height="440"  x:Name="Club_List_Box"  ItemsSource="{Binding Club}" ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                    <ListBox Height="440"  x:Name="Club_List_Box" SelectionChanged="Club_List_Box_SelectionChanged" ItemsSource="{Binding Club}" ScrollViewer.VerticalScrollBarVisibility="Hidden"
          ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                                         <ListBox.ItemTemplate>
-                                            <DataTemplate>
+                                            <DataTemplate  DataType="{x:Type domain:SelectableViewModel}">
                                                 <materialDesign:Card  materialDesign:ShadowAssist.ShadowDepth="Depth3"
                                             Width="235" Height="200"
                                             UniformCornerRadius="10"
-                                            Background="Red" Margin="15">
-                                                    <Grid Width="235" Height="200">
+                                            Background="{x:Null}" Margin="15">
+                                                    <Grid Width="235" Height="200" Background="Red">
                                                         <Grid.RowDefinitions>
                                                             <RowDefinition Height="90" />
                                                             <RowDefinition Height="110" />
@@ -306,7 +462,7 @@
 
                                                         <StackPanel
       Grid.Row="1"
-      Margin="0 24 0 4">
+      Margin="0 24 0 4" >
                                                             <TextBlock Margin="0" 
                                             TextAlignment="Center" 
                                             FontSize="16"  Foreground="White" 
@@ -498,7 +654,7 @@
 
                             </Grid>
                         </materialDesign:Card>-->
-                            <StackPanel Margin="0,30,60,0"  Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                            <StackPanel Margin="0,10,60,0"  Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
                                 <Button 
                                 materialDesign:ShadowAssist.ShadowDepth="Depth3"
   Style="{StaticResource MaterialDesignIconButton}"
@@ -525,7 +681,7 @@
         <materialDesign:DialogHost.DialogContent>
             <materialDesign:Card x:Name="Dialoghost_AddNewClub" Width="550" Height="650" materialDesign:ShadowAssist.ShadowDepth="Depth0"
                                  UniformCornerRadius="20"  
-                                 Margin="0" Background="White">
+                                 Margin="0" Background="{x:Null}">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="200"></RowDefinition>
@@ -533,9 +689,10 @@
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="0" >
-                        <Grid.Background >
-                            <ImageBrush x:Name="Club_Cover_New" ImageSource="{Binding CoverImage}"/>
-                        </Grid.Background>
+                        <Image Width="550" x:Name="Club_Cover_New" Source="{Binding CoverImage, UpdateSourceTrigger=Explicit , Mode=TwoWay}" Stretch="UniformToFill"></Image>
+                        <!--<Grid.Background>
+                            <ImageBrush x:Name="Club_Cover_New" ImageSource="{Binding CoverImage, UpdateSourceTrigger=Explicit, Mode=TwoWay}"/>
+                        </Grid.Background>-->
                         <Button x:Name="Btn_Edit_Cover" Click="Btn_Edit_Cover_Click" ToolTip="Edit Club cover photo" Width="40" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF7C7C7C" Padding="0">
                             <materialDesign:PackIcon Width="35" Height="35" Kind="Pencil" Foreground="WhiteSmoke" />
                         </Button>
@@ -544,20 +701,20 @@
                     <Grid x:Name="LogoClub"
                                     Margin="6,0,0,-100"
                                     Width="180" Height="180" HorizontalAlignment="Center">
-                        <Border CornerRadius="90" BorderThickness="1"  BorderBrush="#FFBBBBBB" Background="White"/>
+                        <Border  CornerRadius="90" BorderThickness="1"  BorderBrush="#FFBBBBBB" Background="White"/>
 
 
-                        <!--<Image Source="Liverpool.png" Width="70" Height="70"/>-->
-                        <Ellipse Width="110" Height="110" StrokeThickness="0.5" Stroke="White" >
+                        <Image x:Name="Img_Club_Logo" Source="{Binding Logo, UpdateSourceTrigger=Explicit, Mode=TwoWay}" Width="110" Height="110"/>
+                        <!--<Ellipse   Width="110" Height="110" StrokeThickness="0.5" Stroke="White" >
                             <Ellipse.Fill>
-                                <ImageBrush x:Name="Img_Club_Logo" ImageSource="{Binding Logo}" Stretch="UniformToFill"/>
+                                <ImageBrush x:Name="Img_Club_Logo" ImageSource="{Binding Logo, Mode=TwoWay}" Stretch="UniformToFill"/>
                             </Ellipse.Fill>
-                        </Ellipse>
+                        </Ellipse>-->
                     </Grid>
 
 
                     <Button BorderThickness="0" x:Name="Btn_AddLogoClub" Click="Btn_AddLogoClub_Click"
-                                    Height="84" Width="168" Grid.Row="0" Margin="6,0,0,-184" Visibility="Visible"
+                                    Height="84" Width="168" Grid.Row="0" Margin="6,0,0,-184" 
                                     materialDesign:ButtonAssist.CornerRadius="0 0 84 84" HorizontalAlignment="Center"
                                     Background="#99000000">
                         <materialDesign:PackIcon Kind="Camera" Width="35" Height="30"  />
@@ -568,7 +725,6 @@
                                     <MultiDataTrigger>
                                         <MultiDataTrigger.Conditions>
                                             <Condition Binding="{Binding ElementName=LogoClub, Path=IsMouseOver}" Value="True"/>
-
                                         </MultiDataTrigger.Conditions>
                                         <Setter Property="Visibility" Value="Visible"/>
                                     </MultiDataTrigger>
@@ -590,7 +746,7 @@
 
                     </Button>
 
-                    <StackPanel Grid.Row="1" Margin="40 60 40 40" >
+                    <StackPanel Grid.Row="1" Margin="40 60 40 40" Background="White" >
                         <StackPanel>
                             <TextBlock FontWeight="Bold" Text="NEW CLUB GENERAL INFORMATION" FontSize="20" Foreground="Black" TextAlignment="Center" />
                             <TextBlock FontSize="16" Text="Edit New Club information here" Foreground="#FF727272" TextAlignment="Center"/>

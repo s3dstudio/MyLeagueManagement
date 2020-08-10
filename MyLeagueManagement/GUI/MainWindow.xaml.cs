@@ -65,10 +65,7 @@ namespace GUI
 
         }
 
-        private void Ex_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+      
 
         private void WindowGrid_MouseDown(object sender, MouseButtonEventArgs e)
         {

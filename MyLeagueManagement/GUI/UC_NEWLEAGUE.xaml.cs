@@ -1,11 +1,9 @@
-﻿using DTO;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -73,28 +71,31 @@ namespace GUI
 
         public UC_NEWLEAGUE(League l)
         {
-            // khúc này t k biết t viết cái gì luôn !!!??? nói chung là truyền 1 cái League từ cái UC_MYLEAGUE qua rồi cho nó bằng cái MyNewLeague
-            // xong cho thằng MyNewLeague xử lí
 
             InitializeComponent();
-            var listclub = GetClubs();
-            this.DataContext = l;
-            l.ListClub = listclub;
-            this.MyNewLeague = l;
             Grid_Info.Visibility = Visibility.Visible;
+            Grid_Settings.Visibility = Visibility.Visible;
             Grid_Clubs.Visibility = Visibility.Collapsed;
-            if (MyNewLeague.ListClub.Count > 0)
-            {
-                Club_List_Box.ItemsSource = MyNewLeague.ListClub;
+            //var listclub = GetClubs();
+            this.MyNewLeague = l;
+           // MyNewLeague.ListClub = listclub;
+            
+            this.DataContext = MyNewLeague;          
+            Card_Settings.DataContext = MyNewLeague.Rule;
+            //if (MyNewLeague.ListClub.Count > 0)
+            //{
+            Club_List_Box.ItemsSource = MyNewLeague.ListClub;
+            Club_List_Box.SelectedItem = null;
+            
 
-            }
+            //}
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             int index = int.Parse(((Button)e.Source).Uid);
 
-            GridCursor.Margin = new Thickness(60 + (140 * index), 0, 0, 0);
+            GridCursor.Margin = new Thickness(20 + (100 * index), 0, 0, 0);
 
 
             switch (index)
@@ -102,34 +103,33 @@ namespace GUI
                 case 0:
                     Grid_Info.Visibility = Visibility.Visible;
                     Grid_Clubs.Visibility = Visibility.Collapsed;
+                    Grid_Settings.Visibility = Visibility.Collapsed;
                     Scrollv.ScrollToVerticalOffset(340);
-                    // LeagueContent.Children.Clear();
-                    //UC_ADD_LEAGUE_INFO a = new UC_ADD_LEAGUE_INFO();
-                    //LeagueContent.Children.Add(a);
+                    
                     break;
                 case 1:
                     Grid_Info.Visibility = Visibility.Collapsed;
                     Grid_Clubs.Visibility = Visibility.Collapsed;
-                    //LeagueContent.Children.Clear();
-                    //Grid_Info.Visibility = Visibility.Collapsed;
-                    //Grid_Clubs.Visibility = Visibility.Visible;
+                    Grid_Settings.Visibility = Visibility.Visible;
+                    
                     break;
                 case 2:
                     Scrollv.ScrollToVerticalOffset(340);
                     Grid_Info.Visibility = Visibility.Collapsed;
+                    Grid_Settings.Visibility = Visibility.Collapsed;
                     Grid_Clubs.Visibility = Visibility.Visible;
-                    if (this.MyNewLeague.ListClub.Count > 0)
-                    {
+
+                   // if (this.MyNewLeague.ListClub.Count > 0)
+                   // {
+                        Club_List_Box.SelectedItem = null;
+                        //CollectionViewSource.GetDefaultView(Club_List_Box.ItemsSource).Refresh();
                         Card_ALLClubs.Visibility = Visibility.Visible;
+                        this.Btn_Modify.IsEnabled = false;
+                        this.Btn_Remove.IsEnabled = false;
+                        this.Btn_Add_New_Club.IsEnabled = true;
                         Grid_Add_New_Club.Children.Clear();
-                    }
-                    else
-                    {
-                        Card_ALLClubs.Visibility = Visibility.Collapsed;
-                        //UC_NEWCLUB newclub = new UC_NEWCLUB();
-                        // Grid_Add_New_Club.Children.Clear();
-                        // Grid_Add_New_Club.Children.Add(newclub);
-                    }
+                    //}
+                   
 
                     // LeagueContent.Children.Clear();
                     //UC_ADD_CLUB_TO_LEAGUE b = new UC_ADD_CLUB_TO_LEAGUE();
@@ -147,12 +147,14 @@ namespace GUI
             Logo = openFileDialog.FileName;
             if (string.Compare(Logo, "", true) != 0)
             {
-                Img_Logo.ImageSource = new BitmapImage(new Uri(@Logo, UriKind.RelativeOrAbsolute));
+                
+                Img_Logo.Source = new BitmapImage(new Uri(@Logo, UriKind.RelativeOrAbsolute));
             }
         }
 
         private void Btn_ShowListClub_Click(object sender, RoutedEventArgs e)
         {
+            CollectionViewSource.GetDefaultView(Club_List_Box.ItemsSource).Refresh();
             Card_ALLClubs.Visibility = Visibility.Visible;
             Grid_Add_New_Club.Children.Clear();
 
@@ -177,7 +179,7 @@ namespace GUI
             Cover = openFileDialog.FileName;
             if (string.Compare(Cover, "", true) != 0)
             {
-                Img_League_Cover.ImageSource = new BitmapImage(new Uri(@Cover, UriKind.RelativeOrAbsolute));
+                Img_League_Cover.Source = new BitmapImage(new Uri(@Cover, UriKind.RelativeOrAbsolute));
             }
         }
         public void NotifyPropertyChanged(string propName)
@@ -188,120 +190,44 @@ namespace GUI
 
         private ArrayList GetClubs()
         {
-            HttpClient client = new HttpClient();
-            // server local
-            client.BaseAddress = new Uri("https://localhost:44392/");
-            var response = client.GetAsync("api/clubs");
-            response.Wait();
-            var readData = response.Result;
-            List<ClubsDTO> listClub = new List<ClubsDTO>();
-            if (readData.IsSuccessStatusCode)
+            return new ArrayList()
             {
-                var jsonData = readData.Content.ReadAsStringAsync();
-                string jsonString = jsonData.Result;
-                var Data = DTO.ClubsDTO.FromJson(jsonString);
-                listClub = Data.Select(kvp => kvp.Value).ToList();  
-            }
-            ArrayList arrayList = new ArrayList();
-            foreach (ClubsDTO clubs in listClub)
-            {
-                arrayList.Add(clubs);
-            }
-            return arrayList;
+                //new Club(1,"Manchester United", "Old Tranfford", "ManchesterUnited.png", "Ole",0,0,0,0,0,0,0,0,"Red","Oldtran.jpg"),
+                //new Club(2,"Liver Pool", "Anfield", "Liverpool.png", "Ole",0,0,0,0,0,0,0,0,"Red","Panoramica2.jpg"),
+                //new Club(3,"Manchester City", "Ethiad Stadium", "ManchesterCity.png", "Ole",0,0,0,0,0,0,0,0,"Aqua","Panoramica2.jpg"),
+                //new Club(4,"News Castle", "St. Jame's Park", "Newcastle.png", "Ole",0,0,0,0,0,0,0,0,"Black","Oldtran.jpg"),
+                //new Club(5,"Everton", "Old Tranfford", "Everton.png", "Ole",0,0,0,0,0,0,0,0,"Blue","1191915482.jpg"),
+                //new Club(6,"Chelsea", "Stanford Bridge", "Chelsea.png", "Ole",0,0,0,0,0,0,0,0,"DarkBlue","1191915482.jpg"),
+                //new Club(7,"Wolverhampton", "St. Mary's Stadium", "Wolver.png", "Ole",0,0,0,0,0,0,0,0,"Orange","Panoramica2.jpg"),
+                //new Club(8,"Tottenham", "Tottenham Stadium", "Tottenham.png", "Ole",0,0,0,0,0,0,0,0,"Red","totsta.jpg"),
+                //new Club(9,"Leicester City", "Goodison Park", "LeicesterCity.png", "Ole",0,0,0,0,0,0,0,0,"Blue","Oldtran.jpg"),
+                //new Club(10,"Watford", "Vicarage Road", "Watford.png", "Ole",0,0,0,0,0,0,0,0,"Orange","Oldtran.jpg"),
+                //new Club(11,"Burnley", "Turf Moor", "Burnley.png", "Ole",0,0,0,0,0,0,0,0,"Violet","Oldtran.jpg"),
+                //new Club(12,"Arsenal", "Emirates Stadium", "Arsenal.png", "Ole",0,0,0,0,0,0,0,0,"Red","1191915482.jpg")
+
+            };
         }
-        private ClubsDTO GetClubsByKey(string Key)
-        {
-            HttpClient client = new HttpClient();
-            // server local
-            client.BaseAddress = new Uri("https://localhost:44392/");
-            var response = client.GetAsync("api/clubs/getbykey/"+Key);
-            response.Wait();
-            var readData = response.Result;
-            List<ClubsDTO> listClub = new List<ClubsDTO>();
-            if (readData.IsSuccessStatusCode)
-            {
-                var jsonData = readData.Content.ReadAsStringAsync();
-                string jsonString = jsonData.Result;
-                var Data = DTO.ClubsDTO.FromJson(jsonString);
-                listClub = Data.Select(kvp => kvp.Value).ToList();
-            }
-            return listClub.First();
-        }
-        private void UpdateKey()
-        {
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri("https://localhost:44392/");
-            var response = client.GetAsync("api/clubs");
-            response.Wait();
-            var readData = response.Result;
-            List<ClubsDTO> listClub = new List<ClubsDTO>();
-            if (readData.IsSuccessStatusCode)
-            {
-                var jsonData = readData.Content.ReadAsStringAsync();
-                string jsonString = jsonData.Result;
-                var Data = DTO.ClubsDTO.FromJson(jsonString);
-                foreach(KeyValuePair<string, ClubsDTO> value in Data)
-                {
-                    value.Value._Key = value.Key;
-                }
-                listClub = Data.Select(kvp => kvp.Value).ToList();
-            }
-            foreach(ClubsDTO value in listClub)
-            {
-                PutClub(value);
-            }
-           
-        }
-        private void PostClub(ClubsDTO club)
-        {
-            HttpClient client = new HttpClient();
-            // server local
-            client.BaseAddress = new Uri("https://localhost:44392/");
-            var response = client.PostAsJsonAsync("api/clubs", club);
-            response.Wait();
-        }
-        private void DeleteClub(ClubsDTO club)
-        {
-            if (club != null)
-            {
-                HttpClient client = new HttpClient();
-                // server local
-                client.BaseAddress = new Uri("https://localhost:44392/");
-                var response = client.DeleteAsync("api/clubs/delete/" + club._Key);
-                response.Wait();
-            }
-        }
-        private void PutClub(ClubsDTO club)
-        {
-            if (club._Key != null)
-            {
-                HttpClient client = new HttpClient();
-                client.BaseAddress = new Uri("https://localhost:44392/");
-                var response = client.PutAsJsonAsync("api/clubs", club);
-                response.Wait();
-            }
-        }
+
         private void Btn_Remove_Click(object sender, RoutedEventArgs e)
         {
             if (Club_List_Box.SelectedItem != null)
             {
-                ClubsDTO cl =  Club_List_Box.SelectedItem as ClubsDTO;
-                DeleteClub(cl);
-                MyNewLeague.ListClub.Remove(cl);
-                   
+                MyNewLeague.ListClub.Remove(Club_List_Box.SelectedItem as Club);
                 CollectionViewSource.GetDefaultView(Club_List_Box.ItemsSource).Refresh();
             }
         }
 
         private void Btn_Modify_Click(object sender, RoutedEventArgs e)
         {
-            Card_ALLClubs.Visibility = Visibility.Collapsed;
-            //int i = MyNewLeague.ListClub.IndexOf(Club_List_Box.SelectedItem as Club);
-            ClubsDTO clubsDTO = Club_List_Box.SelectedItem as ClubsDTO;
-            UC_NEWCLUB newclub = new UC_NEWCLUB(clubsDTO);
-            Grid_Add_New_Club.Children.Clear();
-            Grid_Add_New_Club.Children.Add(newclub);
-            PutClub(clubsDTO);
+            if (Club_List_Box.SelectedItem != null)
+            {
+                Card_ALLClubs.Visibility = Visibility.Collapsed;
+                int i = MyNewLeague.ListClub.IndexOf(Club_List_Box.SelectedItem as Club);
+                UC_NEWCLUB newclub = new UC_NEWCLUB(MyNewLeague.ListClub[i] as Club);
+                Grid_Add_New_Club.Children.Clear();
+                Grid_Add_New_Club.Children.Add(newclub);
+            }
+            
         }
 
 
@@ -311,10 +237,11 @@ namespace GUI
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.tif;...";
             openFileDialog.ShowDialog();
-            TempCoverClub = openFileDialog.FileName;
-            if (string.Compare(TempCoverClub, "", true) != 0)
+            string tempCoverClub = null;
+            tempCoverClub = openFileDialog.FileName;
+            if (string.Compare(tempCoverClub, "", true) != 0)
             {
-                Club_Cover_New.ImageSource = new BitmapImage(new Uri(@TempCoverClub, UriKind.RelativeOrAbsolute));
+                Club_Cover_New.Source = new BitmapImage(new Uri(@tempCoverClub, UriKind.RelativeOrAbsolute));
             }
         }
 
@@ -323,34 +250,34 @@ namespace GUI
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.tif;...";
             openFileDialog.ShowDialog();
+            TempLogoClub = null;
             TempLogoClub = openFileDialog.FileName;
-            if (string.Compare(templogoclub, "", true) != 0)
+            if (string.Compare(TempLogoClub, "", true) != 0)
             {
-                Img_Club_Logo.ImageSource = new BitmapImage(new Uri(@TempLogoClub, UriKind.RelativeOrAbsolute));
+                Img_Club_Logo.Source = new BitmapImage(new Uri(@TempLogoClub, UriKind.RelativeOrAbsolute));
 
             }
         }
 
         private void Btn_Add_New_Club_Click(object sender, RoutedEventArgs e)
         {
-            tempclub = new Club(TempCoverClub, TempLogoClub);
+            tempclub = new Club(0, "", "", "MissLogo.jpg", "", 0, 0, 0, 0, 0, 0, 0, 0, "Red", "83330.jpg");
+            
             this.Dialoghost_AddNewClub.DataContext = tempclub;
         }
-        
+        //confirm and add new club or edited club infor
         private void Btn_Confirm_Click(object sender, RoutedEventArgs e)
         {
+            BindingExpression im = Club_Cover_New.GetBindingExpression(Image.SourceProperty);
+            im.UpdateSource();
+            BindingExpression imlogo = Img_Club_Logo.GetBindingExpression(Image.SourceProperty);
+            imlogo.UpdateSource();
             BindingExpression clubname = Txb_Club_Name.GetBindingExpression(TextBox.TextProperty);
             clubname.UpdateSource();
             BindingExpression manager = Txb_Manager.GetBindingExpression(TextBox.TextProperty);
             manager.UpdateSource();
             BindingExpression stadium = Txb_Stadium.GetBindingExpression(TextBox.TextProperty);
             stadium.UpdateSource();
-            ClubsDTO clubs = new ClubsDTO();
-            clubs.ClubName = tempclub.ClubName;
-            clubs.Manager = tempclub.Manager;
-            clubs.Stadium = tempclub.Stadium;
-            PostClub(clubs);
-            UpdateKey();
             MyNewLeague.ListClub.Add(tempclub);
             CollectionViewSource.GetDefaultView(Club_List_Box.ItemsSource).Refresh();
         }
@@ -359,7 +286,34 @@ namespace GUI
 
         private void Btn_Cancel_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Dialoghost_AddNewClub.DataContext = null;
         }
+
+        private void Club_List_Box_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(Club_List_Box.SelectedItem == null)
+            {
+                this.Btn_Modify.IsEnabled = false;
+                this.Btn_Remove.IsEnabled = false;
+                this.Btn_Add_New_Club.IsEnabled = true;
+            }
+            else
+            {
+                this.Btn_Modify.IsEnabled = true;
+                this.Btn_Remove.IsEnabled = true;
+                this.Btn_Add_New_Club.IsEnabled = false;
+            }
+        }
+
+   
+
+        private void Btn_Active_League_Click(object sender, RoutedEventArgs e)
+        {
+            
+            ((Grid)this.Parent).Children.Remove(this);
+            this.MyNewLeague.IsActive = true;
+        }
+
+       
     }
 }

@@ -15,14 +15,17 @@
                 <RowDefinition Height="100"></RowDefinition>
                 <RowDefinition Height="540"></RowDefinition>
             </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <StackPanel></StackPanel>
+            </Grid>
             <Grid Grid.Row="1">
                 <ScrollViewer VerticalScrollBarVisibility="Visible">
                     <StackPanel>
                         <StackPanel>
-                            <ItemsControl x:Name="ListMatch" ItemsSource="{Binding Player}">
+                            <ItemsControl x:Name="ListMatch" ItemsSource="{Binding Match}">
                                 <ItemsControl.ItemTemplate>
                                     <DataTemplate>
-                                        <StackPanel Width="950">
+                                        <StackPanel Width="1260" HorizontalAlignment="Center">
                                             <Expander HorizontalAlignment="Stretch" Background="#FFEAEAEA" HorizontalContentAlignment="Stretch" BorderBrush="{x:Null}" Foreground="{x:Null}">
                                                 <Expander.Header>
 

@@ -6,7 +6,15 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:GUI"
   mc:Ignorable="d"  Height="720"  Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None"  WindowState="Normal" Background="{x:Null}">
-
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBlock.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid x:Name="WindowGrid" MouseDown="WindowGrid_MouseDown" Height="720" Width="1280">
         <Grid x:Name="GridMainWindow">
         </Grid>
@@ -18,14 +26,16 @@
                     <Button Content="MY LEAGUES" x:Name="MyLeagues" Click="MyLeagues_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="22"  VerticalAlignment="Center" FontFamily="Agency FB"/>
 
 
-                    <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="0" Foreground="White">
-                        <StackPanel Width="120">
-                            <Button Content="New League"/>
-                            <Button Content="Account" x:Name="Ex" Click="Ex_Click"/>
-                            <Button x:Name="Minimize" Content="Minimize" Click="Minimize_Click"/>
-                            <Separator/>
-                            <Button x:Name="ButtonClose" Content="Exit" Click="ButtonClose_Click"/>
-                        </StackPanel>
+                    <materialDesign:PopupBox  Style="{StaticResource MaterialDesignToolPopupBox}"
+        Padding="2 0 2 0" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="0" Foreground="White">
+
+                        
+                            <StackPanel Orientation="Vertical">
+                                <Button x:Name="Minimize" Content="Minimize" Click="Minimize_Click"/>
+                                <Separator/>
+                                <Button x:Name="ButtonClose" Content="Exit" Click="ButtonClose_Click"/>
+                            </StackPanel>
+                        
                     </materialDesign:PopupBox>
                 </StackPanel>
             </Grid>

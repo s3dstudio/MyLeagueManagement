@@ -13,21 +13,46 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections;
+using System.ComponentModel;
 
 namespace GUI
 {
     /// <summary>
     /// Interaction logic for UC_FIXTURES.xaml
     /// </summary>
-    public partial class UC_FIXTURES : UserControl
+    public partial class UC_FIXTURES : UserControl, INotifyPropertyChanged
     {
-        public UC_FIXTURES()
+        private ArrayList allmatch;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void NotifyPropertyChanged(string propName)
+        {
+            if (this.PropertyChanged != null)
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+        }
+
+        public ArrayList AllMatch
+        {
+            get { return this.allmatch; }
+            set
+            {
+                if (this.allmatch != value)
+                {
+                    this.allmatch = value;
+                    this.NotifyPropertyChanged("AllMatch");
+                }
+            }
+        }
+        public UC_FIXTURES(ArrayList allm)
         {
             InitializeComponent();
+           // this.AllMatch = allm;
+            
             var clubs = GetAllClubs();
             var Round = GetRoundMatch(clubs);
-            var Round1 = Round[0];
-            var Round2 = Round[1];
+            //var Round1 = AllMatch[0];
+            //var Round2 = AllMatch[1];
+            var Round1 = Round[1];
             ListMatch.ItemsSource = (ArrayList)Round1;
             
         }
@@ -42,12 +67,12 @@ namespace GUI
                 new Club(4,"News Castle", "St. Jame's Park", "Newcastle.png", "Ole",0,0,0,0,0,0,0,0,"Black","Oldtran.jpg"),
                 new Club(5,"Everton", "Old Tranfford", "Everton.png", "Ole",0,0,0,0,0,0,0,0,"Blue","1191915482.jpg"),
                 new Club(6,"Chelsea", "Stanford Bridge", "Chelsea.png", "Ole",0,0,0,0,0,0,0,0,"DarkBlue","1191915482.jpg"),
-                //new Club(7,"Wolverhampton", "St. Mary's Stadium", "Wolver.png", "Ole",0,0,0,0,0,0,0,0,"Orange","Panoramica2.jpg"),
-                //new Club(8,"Tottenham", "Tottenham Stadium", "Tottenham.png", "Ole",0,0,0,0,0,0,0,0,"Red","totsta.jpg"),
-                //new Club(9,"Leicester City", "Goodison Park", "LeicesterCity.png", "Ole",0,0,0,0,0,0,0,0,"Blue","Oldtran.jpg"),
-                //new Club(10,"Watford", "Vicarage Road", "Watford.png", "Ole",0,0,0,0,0,0,0,0,"Orange","Oldtran.jpg"),
-                //new Club(11,"Burnley", "Turf Moor", "Burnley.png", "Ole",0,0,0,0,0,0,0,0,"Violet","Oldtran.jpg"),
-                //new Club(12,"Arsenal", "Emirates Stadium", "Arsenal.png", "Ole",0,0,0,0,0,0,0,0,"Red","1191915482.jpg")
+                new Club(7,"Wolverhampton", "St. Mary's Stadium", "Wolver.png", "Ole",0,0,0,0,0,0,0,0,"Orange","Panoramica2.jpg"),
+                new Club(8,"Tottenham", "Tottenham Stadium", "Tottenham.png", "Ole",0,0,0,0,0,0,0,0,"Red","totsta.jpg"),
+                new Club(9,"Leicester City", "Goodison Park", "LeicesterCity.png", "Ole",0,0,0,0,0,0,0,0,"Blue","Oldtran.jpg"),
+                new Club(10,"Watford", "Vicarage Road", "Watford.png", "Ole",0,0,0,0,0,0,0,0,"Orange","Oldtran.jpg"),
+                new Club(11,"Burnley", "Turf Moor", "Burnley.png", "Ole",0,0,0,0,0,0,0,0,"Violet","Oldtran.jpg"),
+                new Club(12,"Arsenal", "Emirates Stadium", "Arsenal.png", "Ole",0,0,0,0,0,0,0,0,"Red","1191915482.jpg")
 
             };
         }

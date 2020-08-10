@@ -13,8 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Globalization;
-
-
+using System.Collections;
 
 namespace GUI
 {
@@ -23,15 +22,15 @@ namespace GUI
     /// </summary>
     public partial class UC_ALLCLUB : UserControl
     {
-        public UC_ALLCLUB()
+        public UC_ALLCLUB(ArrayList listclub)
         {
             InitializeComponent();
-            var clubs = GetClubs();
+          //var clubs = GetClubs();
 
-            if (clubs.Count > 0)
-            {
-                ListViewClubs.ItemsSource = clubs;
-            }
+            //if (clubs.Count > 0)
+           // {
+                ListViewClubs.ItemsSource = listclub;
+           // }
 
 
         }

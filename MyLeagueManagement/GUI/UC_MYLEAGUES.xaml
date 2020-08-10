@@ -13,60 +13,106 @@
             <WrapPanel Orientation="Horizontal"/>
         </ItemsPanelTemplate>
         <DataTemplate x:Key="ResizeList" DataType="{x:Type domain:SelectableViewModel}">
-            <materialDesign:Card Width="320" Height="65" Margin="5,5,0,0" Background="{x:Null}">
-                <Border BorderThickness="0 0 0 1" BorderBrush="{DynamicResource MaterialDesignDivider}">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="65"></ColumnDefinition>
-                            <ColumnDefinition Width="*"></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
-                        <Ellipse Grid.Column="0" Width="45" Height="45" StrokeThickness="2" Stroke="White">
-                            <Ellipse.Fill>
-                                <ImageBrush ImageSource="{Binding Logo}" ></ImageBrush>
-                            </Ellipse.Fill>
-                        </Ellipse>
-                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                            <TextBlock Margin="10,0,0,0" FontSize="18" FontWeight="Bold" Text="{Binding LeagueName}" Foreground="Black"></TextBlock>
-                            <TextBlock Margin="10, 0, 0,0" FontSize="16" Text="{Binding Nationality}" Foreground="Black"></TextBlock>
-                        </StackPanel>
-                    </Grid>
-                </Border>
+            <materialDesign:Card UniformCornerRadius="20" Margin="10 5 10 5" Width="300" Height="65" Background="{x:Null}" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="65"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Ellipse Grid.Column="0" Width="45" Height="45" StrokeThickness="2" Stroke="White">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="{Binding Logo}" ></ImageBrush>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                        <TextBlock Margin="10,0,0,0" FontSize="18" FontWeight="Bold" Text="{Binding LeagueName}" Foreground="Black"></TextBlock>
+                        <TextBlock Margin="10, 0, 0,0" FontSize="16" Text="{Binding Nationality}" Foreground="Black"></TextBlock>
+                    </StackPanel>
+                </Grid>
+
             </materialDesign:Card>
         </DataTemplate>
     </UserControl.Resources>
-    <StackPanel Background="#FFC5C5C5" Orientation="Horizontal">
-        <Grid x:Name="LeagueList_Panel" HorizontalAlignment="Left" Height="680" Width="330" Background="White">
+    <StackPanel Background="#FFE6E6E6" Orientation="Horizontal">
+        <Grid x:Name="LeagueList_Panel" HorizontalAlignment="Left" Height="680" Width="320" Background="{x:Null}">
 
             <StackPanel>
-                <ListView x:Name="ListViewMenu" Foreground="#FF151515" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="{x:Null}">
-                    <ListViewItem x:Name="ItemCreate" Height="60" Padding="0" Background="{x:Null}">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="PencilOutline" Height="30" Width="30" Margin="20 10"/>
-                            <TextBlock Text="Create New League" FontSize="20" VerticalAlignment="Center" Margin="10 10"/>
-                        </StackPanel>
+                <ListView  x:Name="ListViewMenu" Foreground="#FF151515" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="{x:Null}" Height="220">
+                    <ListViewItem  Margin="10 10 10 5" x:Name="Intro" Height="60" Padding="0" Background="{x:Null}" Width="300">
+                        <Button Click="Button_Click" Uid="0" Height="60" Width="300" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="300" Height="30" >
+                                <materialDesign:PackIcon Kind="AlphaMBoxOutline" Height="30" Width="30" Margin="20 0">
+                                    <materialDesign:PackIcon.Foreground>
+                                        <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                                            <GradientStop Color="#FF5F2BBB" Offset="0"/>
+                                            <GradientStop Color="#FFEE1BEE" Offset="0.695"/>
+                                        </LinearGradientBrush>
+                                    </materialDesign:PackIcon.Foreground>
+                                </materialDesign:PackIcon>
+                                <TextBlock Text="Home" FontSize="19" Foreground="#FF444444" VerticalAlignment="Center" Margin="10 0" HorizontalAlignment="Center"/>
+                            </StackPanel>
+
+                        </Button>
                     </ListViewItem>
-                    <ListViewItem Height="60" Padding="0">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="TrophyVariantOutline" Height="30" Width="30" Margin="20 10"/>
-                            <TextBlock Text="S3d Studio" VerticalAlignment="Center" FontSize="20"  Margin="10 10"/>
-                        </StackPanel>
+
+                    <ListViewItem x:Name="ItemCreate"  Height="60" Width="300" Margin="10 5 10 5" Padding="0" Background="{x:Null}" >
+                        <Button Click="Button_Click" Uid="1" Height="60" Width="300" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}">
+                            <StackPanel Width="300" Orientation="Horizontal" HorizontalAlignment="Left">
+                                <materialDesign:PackIcon Kind="ViewGridPlus" Height="30" Width="30" Margin="20 0" Foreground="#FF00A600" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                                <TextBlock Text="New League" Foreground="#FF444444" FontSize="20" VerticalAlignment="Center" Margin="10 0"/>
+                            </StackPanel>
+
+                        </Button>
+                    </ListViewItem>
+                    <ListViewItem   Margin="10 5 10 10" Width="300" Height="60" Padding="0" >
+                        <Button Click="Button_Click" Uid="2" Height="60" Width="300" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="{x:Null}">
+                            <StackPanel Orientation="Horizontal" Width="300" >
+                                <materialDesign:PackIcon Kind="TrophyOutline" Height="30" Width="30" Margin="20 0" VerticalAlignment="Stretch" Foreground="#FFC5B300"/>
+                                <TextBlock Text="S3d Studio" Foreground="#FF444444" FontSize="20"  Margin="10 0"/>
+                            </StackPanel>
+                        </Button>
+                      
                     </ListViewItem>
                 </ListView>
-                <StackPanel >
+                <StackPanel>
+                    <Border BorderThickness="0 0 0 0.006in" BorderBrush="#FFBFBFBF" Width="280" HorizontalAlignment="Left" Margin="20,0,0,0"  ></Border>
                     <StackPanel>
-                        <ListBox x:Name="LeagueListBox" 
-                                 ItemTemplate="{StaticResource ResourceKey=ResizeList}" 
+                        <TextBlock Text="MY LEAGUES" Foreground="#FF686868"  Margin="35,20,20,0" FontSize="14" ></TextBlock>
+                        <ListBox x:Name="LeagueListBox"  
+                                  SelectionChanged="LeagueListBox_SelectionChanged"
                                  ItemsPanel="{StaticResource ItemsPanelTemplate}" ItemsSource="{Binding League}" 
-                                 Height="560"
-                                 ScrollViewer.VerticalScrollBarVisibility="Hidden" 
-                                 Padding="0,0,0,5">
+                                 Height="400"
+                                 ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF151515" Padding="20 10 20 20"
+                                 >
+                            <ListBox.ItemTemplate>
+                                <DataTemplate DataType="{x:Type domain:SelectableViewModel}">
+                                    <materialDesign:Card   Width="320" Height="55"  Background="{x:Null}" Foreground="Black"  >
+                                        <Grid Height="60">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="55"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <Ellipse Grid.Column="0" Width="45" Height="45" StrokeThickness="0.006in" Stroke="#FFBFBFBF">
+                                                <Ellipse.Fill>
+                                                    <ImageBrush ImageSource="{Binding Logo}" ></ImageBrush>
+                                                </Ellipse.Fill>
+                                            </Ellipse>
+                                            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                                <TextBlock Margin="10,0,0,0" FontSize="18" FontWeight="Bold"  Text="{Binding LeagueName}" FontFamily="Candara" Foreground="Black" Background="{x:Null}"></TextBlock>
+                                                <TextBlock Margin="10, 0, 0,0" FontSize="14" Text="{Binding Nationality}" Foreground="#FF444444"></TextBlock>
+                                            </StackPanel>
+                                        </Grid>
+
+                                    </materialDesign:Card>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
                         </ListBox>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
         </Grid>
         <Grid>
-            <Grid x:Name="MainGrid" Width="900" Height="680"  Margin="25,0,25, 0">
+            <Grid x:Name="MainGrid" Width="900" Height="680"  Margin="30,0,30, 0">
 
             </Grid>
         </Grid>

@@ -52,9 +52,9 @@ namespace GUI
             DateTime tempDate = new DateTime(2015, 12, 08);
             return new ArrayList()
             {
-            new Player("Mohamed Salah",11,tempDate, "Forward", "Egypt","Sala.png","Liverpool",21),
-            new Player("Fabinho", 6,tempDate, "Midfielder", "Brazil", "Fabinho.png", "Liverpool", 1),
-            new Player("Sadio Mane", 5,tempDate, "Midfielder", "Senegal", "Mane.png", "Liverpool", 14)
+            new Player("Mohamed Salah",11,tempDate, "Forward", "Egypt","Sala.png","Liverpool","ManchesterUnited.png",21),
+            new Player("Fabinho", 6,tempDate, "Midfielder", "Brazil", "Fabinho.png", "Liverpool","ManchesterUnited.png", 1),
+            new Player("Sadio Mane", 5,tempDate, "Midfielder", "Senegal", "Mane.png", "Liverpool","ManchesterUnited.png", 14)
             };
         }
 

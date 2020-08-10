@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GUI
 {
-    class Player : INotifyPropertyChanged
+   public class Player : INotifyPropertyChanged
     {
         private string playername;
         public string PlayerName
@@ -102,6 +102,20 @@ namespace GUI
                 }
             }
         }
+
+        private string logoclub;
+        public string LogoClub
+        {
+            get { return this.logoclub; }
+            set
+            {
+                if (this.logoclub != value)
+                {
+                    this.logoclub = value;
+                    this.NotifyPropertyChanged("LogoClub");
+                }
+            }
+        }
         private int allgoal;
         public int AllGoal
         {
@@ -116,7 +130,7 @@ namespace GUI
             }
         }
 
-        public Player(string playername, int number, DateTime dob, string position, string nationality, string image, string club, int allgoal)
+        public Player(string playername, int number, DateTime dob, string position, string nationality, string image, string club, string logoclub, int allgoal)
         {
             this.PlayerName = playername;
             this.Number = number;
@@ -125,7 +139,15 @@ namespace GUI
             this.Nationality = nationality;
             this.Image = image;
             this.Club = club;
+            this.LogoClub = logoclub;
             this.AllGoal = allgoal;
+        }
+
+        public Player() { }
+
+        public Player(string image) 
+        {
+            this.Image = image;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

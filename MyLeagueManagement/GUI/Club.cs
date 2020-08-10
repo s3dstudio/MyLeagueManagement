@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
@@ -10,6 +11,20 @@ namespace GUI
 {
     public class Club : INotifyCollectionChanged
     {
+        private ArrayList listplayer;
+        public ArrayList ListPlayer
+        {
+            get { return this.listplayer; }
+            set
+            {
+                if (this.listplayer != value)
+                {
+                    this.listplayer = value;
+                    this.NotifyPropertyChanged("ListPlayer");
+                }
+            }
+        }
+        
         private int position;
         public int Position
         {
@@ -216,6 +231,7 @@ namespace GUI
                 {
                     this.coverimage = value;
                     this.NotifyPropertyChanged("CoverImage");
+                    
                 }
             }
         }
@@ -237,10 +253,24 @@ namespace GUI
             GD = gd;
             BackGround = background;
             CoverImage = coverimage;
+            this.ListPlayer = new ArrayList();
         }
 
         public Club()
         { }
+        public Club(int position, string clubname, string stadium, string logo, string manager, int points,  string coverimage)
+        {
+            Position = position;
+            ClubName = clubname;
+            Stadium = stadium;
+            Logo = logo;
+            Manager = manager;                                                                  
+            Points = points;
+            CoverImage = coverimage;
+
+            this.ListPlayer = new ArrayList();
+        }
+
 
         public Club(string coverimage, string logo)
         {

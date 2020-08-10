@@ -78,3 +78,39 @@ D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\S
 D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Net.Http.Formatting.xml
 D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Numerics.Vectors.xml
 D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\DTO.dll.config
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\DTO.dll
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\DTO.pdb
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\Firebase.Storage.dll
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\FireSharp.dll
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\FireSharp.Serialization.JsonNet.dll
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\MaterialDesignColors.dll
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\Microsoft.Net.Http.Headers.dll
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\RestSharp.dll
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Buffers.dll
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Memory.dll
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\Microsoft.Net.Http.Headers.xml
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\RestSharp.xml
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Buffers.xml
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Memory.xml
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\obj\Debug\DTO.csproj.CopyComplete
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\obj\Debug\DTO.dll
+C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\DTO\obj\Debug\DTO.pdb

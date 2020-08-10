@@ -22,6 +22,20 @@ namespace GUI
     /// </summary>
     public partial class UC_MYLEAGUES : UserControl, INotifyPropertyChanged
     {
+        private League templeague;
+        public League TempLeague
+        {
+            get { return this.templeague; }
+            set
+            {
+                if (this.templeague != value)
+                {
+                    this.templeague = value;
+                    this.NotifyPropertyChanged("TempLeague");
+                }
+            }
+        }
+
         private ArrayList leaguelist;
         public ArrayList LeagueList
         {
@@ -37,15 +51,13 @@ namespace GUI
         }
         public UC_MYLEAGUES()
         {
-            InitializeComponent();
-            League newleague = new League("This is league name nha", "pre.png", "Nationality tao truyền vào Laos");
-            UC_NEWLEAGUE l = new UC_NEWLEAGUE(newleague);
+            InitializeComponent();   
+            this.templeague = new League("", "Pree.png", "");
+            UC_NEWLEAGUE l = new UC_NEWLEAGUE(templeague);
             MainGrid.Children.Add(l);
             LeagueList = GetLeague();
-            if (LeagueList.Count > 0)
-            {
-                LeagueListBox.ItemsSource = LeagueList;
-            }
+            LeagueListBox.ItemsSource = LeagueList;
+
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -67,6 +79,52 @@ namespace GUI
         {
             if (this.PropertyChanged != null)
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+        }
+
+       
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            int index = int.Parse(((Button)e.Source).Uid);
+            switch (index)
+            {
+                case 0:
+                    ((Grid)this.Parent).Children.Remove(this);
+                    
+                    break;
+                case 1:
+                    if(this.TempLeague.IsActive == true)
+                    {
+                        LeagueList.Add(TempLeague);
+                        
+                       
+                        TempLeague.AllMatch = new ArrayList(TempLeague.GetRoundMatch(TempLeague.ListClub));
+                    }
+                    this.templeague = new League("", "pre.png", "");
+                    UC_NEWLEAGUE l = new UC_NEWLEAGUE(templeague);
+                    MainGrid.Children.Add(l);
+                    CollectionViewSource.GetDefaultView(LeagueListBox.ItemsSource).Refresh();
+                    
+                    break;
+                case 2:
+                    ((Grid)this.Parent).Children.Remove(this);
+                    
+
+                    break;
+            }
+        }
+
+        private void LeagueListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            CollectionViewSource.GetDefaultView(LeagueListBox.ItemsSource).Refresh();
+            int i = LeagueList.IndexOf(LeagueListBox.SelectedItem as League);
+            UC_LEAGUE Selected = new UC_LEAGUE(LeagueList[i] as League);
+            //LeagueListBox.SelectedItem = null;
+            //MainGrid.Children.Clear();
+            // MainGrid.Children.Add(Selected);
+           // ((Grid)this.Parent).Children.Clear();
+          ((Grid)this.Parent).Children.Add(Selected);
+
         }
     }
 }

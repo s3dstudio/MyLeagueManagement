@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,11 +20,35 @@ namespace GUI
     /// <summary>
     /// Interaction logic for LEAGUE.xaml
     /// </summary>
-    public partial class UC_LEAGUE : UserControl
+    public partial class UC_LEAGUE : UserControl, INotifyPropertyChanged
     {
-        public UC_LEAGUE()
+        private League selectedleague;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void NotifyPropertyChanged(string propName)
+        {
+            if (this.PropertyChanged != null)
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+        }
+
+        public League SelectedLeague
+        {
+            get { return this.selectedleague; }
+            set
+            {
+                if (this.selectedleague != value)
+                {
+                    this.selectedleague = value;
+                    this.NotifyPropertyChanged("SelectedLeague");
+                }
+            }
+        }
+        public UC_LEAGUE(League l)
         {
             InitializeComponent();
+            this.SelectedLeague = l;
+            
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -41,18 +67,20 @@ namespace GUI
                 case 1:
                     // GridMain.Background = Brushes.White;
                     GridMain.Children.Clear();
-                    UC_ALLCLUB a = new UC_ALLCLUB();
+                    UC_ALLCLUB a = new UC_ALLCLUB(SelectedLeague.ListClub);
                     GridMain.Children.Add(a);
 
                     break;
                 case 2:
                     GridMain.Children.Clear();
-                    UC_FIXTURES f = new UC_FIXTURES();
+                    UC_FIXTURES f = new UC_FIXTURES(SelectedLeague.AllMatch);
                    GridMain.Children.Add(f);
                     //GridMain.Background = Brushes.CadetBlue;
                     break;
                 case 3:
                     GridMain.Children.Clear();
+                    UC_RESULTS r = new UC_RESULTS();
+                    GridMain.Children.Add(r);
                     //GridMain.Background = Brushes.DarkBlue;
                     break;
                 case 4:

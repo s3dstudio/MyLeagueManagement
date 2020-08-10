@@ -4,9 +4,94 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GUI"
+              xmlns:domain="clr-namespace:GUI.Domain"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+             d:DesignHeight="2050" d:DesignWidth="800">
+    <StackPanel>
+        <materialDesign:Card x:Name="Card_Settings" 
+                     Height="980" Margin="0 20 0 0"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                    UniformCornerRadius="20" Background="White">
+            <StackPanel Margin="40">
+                <StackPanel x:Name="Club_Settings">
+                    <TextBlock Width="180"   FontWeight="Bold" Text="Club Settings" FontSize="25" Foreground="Black" HorizontalAlignment="Left" Margin="60,0,0,30" />
+                    <TextBlock Width="180"  Margin="60 0 0 5"  Text="Age Requirement" FontSize="20" Foreground="#FF727272" HorizontalAlignment="Left" />
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox  Text="" FontSize="18" materialDesign:HintAssist.Hint="Minimum Age Requirement"
+                     materialDesign:HintAssist.HintOpacity=".6"       
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" BorderBrush="#899C9292" Margin="60,0,0,0" Background="#FFF3F3F3" Width="270" />
+                        <TextBox  Text="" FontSize="18" materialDesign:HintAssist.Hint="Maximum Age Requirement"
+                     materialDesign:HintAssist.HintOpacity=".6"       
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" BorderBrush="#899C9292" Margin="60,0,0,0" Background="#FFF3F3F3" Width="270" />
+                    </StackPanel>
+                    <TextBlock Width="180"  Margin="60 30 0 5"  Text="Squad Requirement" FontSize="20" Foreground="#FF727272" HorizontalAlignment="Left" />
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox  Text="" FontSize="18" materialDesign:HintAssist.Hint="Minimum Squad Size"
+                     materialDesign:HintAssist.HintOpacity=".6"       
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" BorderBrush="#899C9292" Margin="60,0,0,0" Background="#FFF3F3F3" Width="270" />
+                        <TextBox  Text="" FontSize="18" materialDesign:HintAssist.Hint="Maximum Squad Size"
+                     materialDesign:HintAssist.HintOpacity=".6"       
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" BorderBrush="#899C9292" Margin="60,0,0,0" Background="#FFF3F3F3" Width="270" />
+                    </StackPanel>
+                    <TextBlock Width="180"  Margin="60 30 0 5"  Text="Foreign Player" FontSize="20" Foreground="#FF727272" HorizontalAlignment="Left" />
+
+                    <TextBox  Text="" FontSize="18" materialDesign:HintAssist.Hint="Maximum  Player in Squad"
+                     materialDesign:HintAssist.HintOpacity=".6"       
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" BorderBrush="#899C9292" Margin="60,00,60,0" Background="#FFF3F3F3" Width="270" HorizontalAlignment="Left" />
+                    <TextBlock Width="180"   FontWeight="Bold" Text="Match Settings" FontSize="25" Foreground="Black" HorizontalAlignment="Left" Margin="60,30,0,30" />
+                    <TextBlock Width="344"  Margin="60 0 0 5"  Text="Maximum Amount of Stoppage Time" FontSize="20" Foreground="#FF727272" HorizontalAlignment="Left" />
+                    <Slider Margin="60,-35,60,0" Width="270" HorizontalAlignment="Left"
+                    Minimum="0" TickFrequency="1"
+                    Maximum="45"
+                    Style="{StaticResource MaterialDesignDiscreteSlider}"
+                    ToolTip="MaterialDesignDiscreteSlider"
+                    Value="10" BorderBrush="{x:Null}" Foreground="#FF17FF00" Height="52"/>
+                    <TextBlock Width="180"   FontWeight="Bold" Text="Table Settings" FontSize="25" Foreground="Black" HorizontalAlignment="Left" Margin="60,30,0,5" />
+                    <ComboBox x:Name="Cbb_Priority" Text="{Binding Position, UpdateSourceTrigger=Explicit}" Style="{StaticResource MaterialDesignFloatingHintComboBox}" Margin="60,0,0,0" Background="#FFF3F3F3"  FontSize="18"
+                            materialDesign:HintAssist.Hint="Priority" BorderBrush="#899C9292" Width="270" Height="51"
+                            materialDesign:HintAssist.HintOpacity=".6"
+                            IsEditable="True" HorizontalAlignment="Left">
+                        <ComboBoxItem Width="270" Padding="0" >
+                            Point - Goal Diffrence - Away Goals - Head to Head
+                        </ComboBoxItem>
+                        <ComboBoxItem  Width="270" Padding="0">
+                            Point - Goal Diffrence - Head to Head - Away Goals
+                        </ComboBoxItem>
+                        <ComboBoxItem  Width="270" Padding="0">
+                            Point - Head to Head - Goal Diffrence - Away Goals
+                        </ComboBoxItem>
+                        <ComboBoxItem Width="270" Padding="0">
+                            Point - Head to Head - Away Goals - Goal Diffrence
+                        </ComboBoxItem>
+                        <ComboBoxItem Width="270" Padding="0">
+                            Point - Goal Diffrence - Head to Head - Away Goals
+                        </ComboBoxItem>
+                        <ComboBoxItem Width="270" Padding="0">
+                            Point - Goal Diffrence - Away Goals - Head to Head
+                        </ComboBoxItem>
+                        <ComboBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel />
+                            </ItemsPanelTemplate>
+                        </ComboBox.ItemsPanel>
+                    </ComboBox>
+                    <TextBox  Text="" FontSize="18" materialDesign:HintAssist.Hint="Maximum Player in Squad"
+                     materialDesign:HintAssist.HintOpacity=".6"       
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" BorderBrush="#899C9292" Margin="60,20,60,0" Background="#FFF3F3F3" />
+                    <TextBox  Background="#FFF3F3F3"  FontSize="18" materialDesign:HintAssist.Hint="Nationality"
+                            Style="{StaticResource MaterialDesignFloatingHintTextBox}" BorderBrush="#899C9292" Margin="60,20,60,0" />
+
+                    <TextBox Text="{Binding NumClub, UpdateSourceTrigger=Explicit}" FontSize="18" materialDesign:HintAssist.Hint="Number of Clubs attended"
+                     materialDesign:HintAssist.HintOpacity=".6"      
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" Background="#FFF3F3F3" BorderBrush="#899C9292" Margin="60,20,60,0" />
+                </StackPanel>
+
+
+
+            </StackPanel>
+        </materialDesign:Card>
+     
+    </StackPanel>
 </UserControl>

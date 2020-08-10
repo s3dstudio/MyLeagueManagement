@@ -13,7 +13,7 @@
             <RowDefinition Height="640"></RowDefinition>
 
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Height="40" HorizontalAlignment="Right" Margin="0,0,20,0" VerticalAlignment="Top">
+        <Grid Grid.Row="0" Height="40" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Background="#FF06002E">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="300"></ColumnDefinition>
                 <ColumnDefinition Width="980"></ColumnDefinition>
@@ -68,8 +68,8 @@
                 </Grid>
             </Grid>
             <Grid Grid.Column="0" HorizontalAlignment="Left" Margin="20,0,0,0">
-                <StackPanel  HorizontalAlignment="Left" Width="50" Height="50">
-                    <Button x:Name="ArrowLeft" Click="ArrowLeft_Click" Width="50" Height="50" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" >
+                <StackPanel  HorizontalAlignment="Left" Width="40" Height="40">
+                    <Button x:Name="ArrowLeft" Click="ArrowLeft_Click" Width="40" Height="40" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Padding="0" >
                         <materialDesign:PackIcon Kind="ArrowLeft" Width="30" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
                     </Button>
                 </StackPanel>

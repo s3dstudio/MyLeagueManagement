@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Collections;
+using System.Data;
 
 namespace GUI
 {
@@ -36,6 +37,20 @@ namespace GUI
                 {
                     this.logo = value;
                     this.NotifyPropertyChanged("Logo");
+                }
+            }
+        }
+
+        private string coverimg;
+        public string CoverImg
+        {
+            get { return this.coverimg; }
+            set
+            {
+                if (this.coverimg != value)
+                {
+                    this.coverimg = value;
+                    this.NotifyPropertyChanged("CoverImg");
                 }
             }
         }
@@ -82,18 +97,94 @@ namespace GUI
             }
         }
 
-       
+        private bool isactive;
+        public bool IsActive
+        {
+            get { return this.isactive; }
+            set
+            {
+                if (this.isactive != value)
+                {
+                    this.isactive = value;
+                    this.NotifyPropertyChanged("IsActive");
+                }
+            }
+        }
+
+        private Setting rule;
+        public Setting Rule
+        {
+            get { return this.rule; }
+            set
+            {
+                if (this.rule != value)
+                {
+                    this.rule = value;
+                    this.NotifyPropertyChanged("Rule");
+                }
+            }
+        }
+
+        private ArrayList allmatch;
+        public ArrayList AllMatch
+        {
+            get { return this.allmatch; }
+            set
+            {
+                if (this.allmatch != value)
+                {
+                    this.allmatch = value;
+                    this.NotifyPropertyChanged("ListClub");
+                }
+            }
+        }
+
+        
 
         public League(string leaguename, string logo, string nationality)
         {
+            this.NumClub = 6;
+            this.CoverImg = "zozd74mt2nl41.jpg";
             this.LeagueName = leaguename;
             this.Logo = logo;
             this.Nationality = nationality;
+            this.Rule = new Setting();
+            this.ListClub = new ArrayList();
+            this.IsActive = false;
         }
 
         public League()
         {
 
+        }
+
+        public ArrayList GetRoundMatch(ArrayList AllClubs)
+        {
+            int n = AllClubs.Count;
+            ArrayList Round1 = new ArrayList();
+            ArrayList Round2 = new ArrayList();
+            if (n > 0)
+            {
+
+                foreach (Club i in AllClubs)
+                {
+                    foreach (Club j in AllClubs)
+                    {
+                        if (AllClubs.IndexOf(i) != AllClubs.IndexOf(j))
+                        {
+
+                            if (AllClubs.IndexOf(i) > AllClubs.IndexOf(j))
+                            {
+                                Round1.Add(new Match(i, j));
+                            }
+                            else if (AllClubs.IndexOf(i) < AllClubs.IndexOf(j))
+                                Round2.Add(new Match(i, j));
+                        }
+
+                    }
+                }
+            }
+            return new ArrayList(2) { Round1, Round2 };
         }
 
         public void NotifyPropertyChanged(string propName)
