@@ -138,9 +138,8 @@ namespace GUI
                 }
             }
         }
-
-        
-
+        public string RuleKey { get; set; }
+        public string _Key { get; set; }
         public League(string leaguename, string logo, string nationality)
         {
             this.NumClub = 6;

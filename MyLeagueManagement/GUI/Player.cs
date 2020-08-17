@@ -129,6 +129,7 @@ namespace GUI
                 }
             }
         }
+        public string ClubKey { get; set; }
 
         public Player(string playername, int number, DateTime dob, string position, string nationality, string image, string club, string logoclub, int allgoal)
         {

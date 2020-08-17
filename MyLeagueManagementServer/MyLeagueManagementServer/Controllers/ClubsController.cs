@@ -10,9 +10,6 @@ using MyLeagueManagementServer.DTO;
 
 namespace MyLeagueManagementServer.Controllers
 {
-    //[Route("api/[controller]")]
-    //[ApiController]
-
     public class ClubsController : ControllerBase
     {
         ConnectDatabase connect = new ConnectDatabase();
@@ -43,7 +40,7 @@ namespace MyLeagueManagementServer.Controllers
             ClubsBUS clubs = new ClubsBUS();
             string jsonData = @"{'ID':'" + club.ID +"','_Key':'"+club._Key+ "','ClubName':'" + club.ClubName + "','Position':'" + club.Position + "','Stadium':'" + club.Stadium + "','Logo':'" + club.Logo + "','Manager':'" +
                 club.Manager + "','Plays':'" + club.Plays + "','Won':'" + club.Won + "','Drawn':'" + club.Drawn + "','Lost':'" + club.Lost + "','Points':'" + club.Points + "','GF':'" + club.GF + "','GA':'" + club.GA
-                + "','GD':'" + club.GD + "','BackGround':'" + club.BackGround + "','CoverImage':'" + club.CoverImage + "'}";
+                + "','GD':'" + club.GD + "','BackGround':'" + club.BackGround + "','CoverImage':'" + club.CoverImage + "','LeagueKey' : '"+club.LeagueKey+"'}";
             clubs.post(ref jsonData);
             return Ok(club);
         }
@@ -53,19 +50,17 @@ namespace MyLeagueManagementServer.Controllers
         {
             connect.ConnectFirebase();
             ClubsBUS clubs = new ClubsBUS();
-            string jsonData = @"{'ID':'" + club.ID +"','_Key':'" + club._Key + "','ClubName':'" + club.ClubName + "','Position':'" + club.Position + "','Stadium':'" + club.Stadium + "','Logo':'" + club.Logo + "','Manager':'" +
-               club.Manager + "','Plays':'" + club.Plays + "','Won':'" + club.Won + "','Drawn':'" + club.Drawn + "','Lost':'" + club.Lost + "','Points':'" + club.Points + "','GF':'" + club.GF + "','GA':'" + club.GA
-               + "','GD':'" + club.GD + "','BackGround':'" + club.BackGround + "','CoverImage':'" + club.CoverImage + "'}";
+            string jsonData = @"{'ID':'" + club.ID + "','_Key':'" + club._Key + "','ClubName':'" + club.ClubName + "','Position':'" + club.Position + "','Stadium':'" + club.Stadium + "','Logo':'" + club.Logo + "','Manager':'" +
+                club.Manager + "','Plays':'" + club.Plays + "','Won':'" + club.Won + "','Drawn':'" + club.Drawn + "','Lost':'" + club.Lost + "','Points':'" + club.Points + "','GF':'" + club.GF + "','GA':'" + club.GA
+                + "','GD':'" + club.GD + "','BackGround':'" + club.BackGround + "','CoverImage':'" + club.CoverImage + "','LeagueKey' : '" + club.LeagueKey + "'}";
             clubs.put(ref jsonData,club._Key);
             return Ok(club);
         }
         [Route("api/Clubs/delete/{Key?}")]
-        //[HttpDelete]
         public IActionResult Delete(string Key)
         {
             connect.ConnectFirebase();
             ClubsBUS clubs = new ClubsBUS();
-            Console.WriteLine(Key);
             clubs.delete(Key);
             return StatusCode(200);
         }

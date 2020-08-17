@@ -211,20 +211,6 @@ D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\G
 D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
 D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI.csproj.CopyComplete
-D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\Microsoft.Extensions.Primitives.dll
-D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\Microsoft.Net.Http.Headers.dll
-D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\System.Buffers.dll
-D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\System.Memory.dll
-D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\System.Net.Http.Formatting.dll
-D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\System.Numerics.Vectors.dll
-D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\Microsoft.Extensions.Primitives.xml
-D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\Microsoft.Net.Http.Headers.xml
-D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\System.Buffers.xml
-D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\System.Memory.xml
-D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\System.Net.Http.Formatting.xml
-D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\System.Numerics.Vectors.xml
-D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\GUI.exe.config
 C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\GUI.exe
 C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\GUI.pdb
@@ -286,3 +272,68 @@ C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\GUI\obj\Deb
 C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI.exe
 C:\Users\Sang Minh\Desktop\cax\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI.pdb
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\System.Net.Http.Formatting.dll
+D:\VS Code\Do An IT008\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\System.Net.Http.Formatting.xml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\GUI.exe.config
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\GUI.exe
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\GUI.pdb
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\DTO.dll
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\Firebase.Storage.dll
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\FireSharp.dll
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\FireSharp.Serialization.JsonNet.dll
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\MaterialDesignColors.dll
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\Newtonsoft.Json.dll
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\RestSharp.dll
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\System.Net.Http.Formatting.dll
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\DTO.pdb
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\DTO.dll.config
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\MaterialDesignColors.pdb
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\Newtonsoft.Json.xml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\RestSharp.xml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\bin\Debug\System.Net.Http.Formatting.xml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_LEAGUE.baml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\ExPlayer.g.cs
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\HOME.g.cs
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\MainWindow.g.cs
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\ucccExxx.g.cs
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_ALLCLUB.g.cs
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_ALLLEAGUE.g.cs
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_ALLPLAYER.g.cs
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_FIXTURES.g.cs
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_LEAGUE.g.cs
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_MYLEAGUES.g.cs
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_NEWCLUB.g.cs
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_NEWLEAGUE.g.cs
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_RESULTS.g.cs
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_TABLES.g.cs
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\App.g.cs
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI_MarkupCompile.cache
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI_MarkupCompile.lref
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\App.baml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\ExPlayer.baml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\HOME.baml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\MainWindow.baml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\ucccExxx.baml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_ALLCLUB.baml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_ALLLEAGUE.baml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_ALLPLAYER.baml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_FIXTURES.baml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_MYLEAGUES.baml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_NEWCLUB.baml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_NEWLEAGUE.baml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_RESULTS.baml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\UC_TABLES.baml
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI.g.resources
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI.exe
+D:\VS Code\GIT\Git\MyLeagueManagement\MyLeagueManagement\GUI\obj\Debug\GUI.pdb

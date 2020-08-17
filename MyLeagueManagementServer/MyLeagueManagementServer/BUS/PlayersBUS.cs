@@ -23,44 +23,37 @@ namespace MyLeagueManagementServer.BUS
             FirebaseDB firebaseDBTeams = firebaseDB.Node("Players");
             Console.WriteLine("GET Request");
             FirebaseResponse getResponse = firebaseDBTeams.Get();
-            Console.WriteLine(getResponse.Success);
-            if (getResponse.Success)
-                Console.WriteLine(getResponse.JSONContent);
-            Console.WriteLine();
+            temp = getResponse.JSONContent;
+            return temp;
+        }
+        public string getbykey(out string temp, string key)
+        {
+            FirebaseDB firebaseDB = new FirebaseDB(CONSTANT.FIREBASE_URL);
+            FirebaseDB firebaseDBTeams = firebaseDB.Node("Players").Node(key);
+            Console.WriteLine("GET Request");
+            FirebaseResponse getResponse = firebaseDBTeams.Get();
             temp = getResponse.JSONContent;
             return temp;
         }
         public void patch()
         {
             FirebaseDB firebaseDB = new FirebaseDB(CONSTANT.FIREBASE_URL);
-            FirebaseDB firebaseDBTeams = firebaseDB.Node("Players");
-            Console.WriteLine("PATCH Request");
+            FirebaseDB firebaseDBTeams = firebaseDB.Node("Clubs");
             FirebaseResponse patchResponse = firebaseDBTeams
                 .Patch("{\"Designation\":\"CRM Consultant\"}");
-            Console.WriteLine(patchResponse.Success);
-            Console.WriteLine();
         }
-        public void delete()
+        public void delete(string Key)
         {
             FirebaseDB firebaseDB = new FirebaseDB(CONSTANT.FIREBASE_URL);
-            FirebaseDB firebaseDBTeams = firebaseDB.Node("Players");
-            Console.WriteLine("DELETE Request");
+            FirebaseDB firebaseDBTeams = firebaseDB.Node("Clubs").Node(Key);
             FirebaseResponse deleteResponse = firebaseDBTeams.Delete();
-            Console.WriteLine(deleteResponse.Success);
-            Console.WriteLine();
-
-            Console.WriteLine(firebaseDBTeams.ToString());
-            Console.ReadLine();
         }
-        public void put(ref string serial,string para)
+        public void put(ref string serial, string para)
         {
 
             FirebaseDB firebaseDB = new FirebaseDB(CONSTANT.FIREBASE_URL);
-            FirebaseDB firebaseDBTeams = firebaseDB.NodePath("Players/"+para);
-            Console.WriteLine("PUT Request");
+            FirebaseDB firebaseDBTeams = firebaseDB.NodePath("Players/" + para);
             FirebaseResponse putResponse = firebaseDBTeams.Put(serial);
-            Console.WriteLine(putResponse.Success);
-            Console.WriteLine();
         }
     }
 }

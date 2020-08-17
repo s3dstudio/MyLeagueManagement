@@ -8,6 +8,7 @@ namespace MyLeagueManagementServer.DTO
     public class ClubsDTO
     {
         public string _Key { get; set; }
+        public string LeagueKey { get; set; }
         public string ID { get; set; }
         public string Position { get; set; }
 

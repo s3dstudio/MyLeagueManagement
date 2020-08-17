@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,7 +51,18 @@ namespace GUI
             
 
         }
-
+        public ArrayList GetListClubByLeagueKey(string LeagueKey)
+        {
+            ArrayList arr = new ArrayList();
+            string jsonString = Client.Instance.Get("api/clubs");
+            var Data = DTO.ClubsDTO.FromJson(jsonString);
+            foreach (KeyValuePair<string, ClubsDTO> value in Data)
+            {
+                if (value.Value.LeagueKey == LeagueKey)
+                    arr.Add(value);
+            }
+            return arr;
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             int index = int.Parse(((Button)e.Source).Uid);
@@ -65,9 +77,9 @@ namespace GUI
                     //GridMain.Background = Brushes.Aquamarine;
                     break;
                 case 1:
-                    // GridMain.Background = Brushes.White;
+                    //GridMain.Background = Brushes.White;
                     GridMain.Children.Clear();
-                    UC_ALLCLUB a = new UC_ALLCLUB(SelectedLeague.ListClub);
+                    UC_ALLCLUB a = new UC_ALLCLUB(GetListClubByLeagueKey(SelectedLeague._Key));
                     GridMain.Children.Add(a);
 
                     break;

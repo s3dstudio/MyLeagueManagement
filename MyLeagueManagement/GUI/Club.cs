@@ -235,7 +235,9 @@ namespace GUI
                 }
             }
         }
-
+        public string _Key { get; set; }
+        public string LeagueKey { get; set; }
+        //public ArrayList ListPlayer { get; set; }
         public Club(int position, string clubname, string stadium, string logo, string manager, int plays, int won, int drawn, int lost, int points, int gf, int ga, int gd, string background, string coverimage)
         {
             Position = position;

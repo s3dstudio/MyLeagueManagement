@@ -1,10 +1,13 @@
-﻿using Microsoft.Win32;
+﻿using DTO;
+using Microsoft.Win32;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -96,8 +99,6 @@ namespace GUI
             int index = int.Parse(((Button)e.Source).Uid);
 
             GridCursor.Margin = new Thickness(20 + (100 * index), 0, 0, 0);
-
-
             switch (index)
             {
                 case 0:
@@ -111,7 +112,6 @@ namespace GUI
                     Grid_Info.Visibility = Visibility.Collapsed;
                     Grid_Clubs.Visibility = Visibility.Collapsed;
                     Grid_Settings.Visibility = Visibility.Visible;
-                    
                     break;
                 case 2:
                     Scrollv.ScrollToVerticalOffset(340);
@@ -138,7 +138,6 @@ namespace GUI
 
             }
         }
-
         private void Btn_AddLogo_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -151,7 +150,6 @@ namespace GUI
                 Img_Logo.Source = new BitmapImage(new Uri(@Logo, UriKind.RelativeOrAbsolute));
             }
         }
-
         private void Btn_ShowListClub_Click(object sender, RoutedEventArgs e)
         {
             CollectionViewSource.GetDefaultView(Club_List_Box.ItemsSource).Refresh();
@@ -160,7 +158,6 @@ namespace GUI
 
 
         }
-
         // private void Btn_Add_Click(object sender, RoutedEventArgs e)
         // {
         // Card_ALLClubs.Visibility = Visibility.Collapsed;
@@ -170,7 +167,6 @@ namespace GUI
         // tempclub = new Club();
         //this.Dialoghost_AddNewClub.DataContext = tempclub;
         //}
-
         private void Btn_Add_League_Cover_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -187,7 +183,6 @@ namespace GUI
             if (this.PropertyChanged != null)
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
         }
-
         private ArrayList GetClubs()
         {
             return new ArrayList()
@@ -207,7 +202,6 @@ namespace GUI
 
             };
         }
-
         private void Btn_Remove_Click(object sender, RoutedEventArgs e)
         {
             if (Club_List_Box.SelectedItem != null)
@@ -216,7 +210,6 @@ namespace GUI
                 CollectionViewSource.GetDefaultView(Club_List_Box.ItemsSource).Refresh();
             }
         }
-
         private void Btn_Modify_Click(object sender, RoutedEventArgs e)
         {
             if (Club_List_Box.SelectedItem != null)
@@ -229,9 +222,6 @@ namespace GUI
             }
             
         }
-
-
-
         private void Btn_Edit_Cover_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -244,7 +234,6 @@ namespace GUI
                 Club_Cover_New.Source = new BitmapImage(new Uri(@tempCoverClub, UriKind.RelativeOrAbsolute));
             }
         }
-
         private void Btn_AddLogoClub_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -258,7 +247,6 @@ namespace GUI
 
             }
         }
-
         private void Btn_Add_New_Club_Click(object sender, RoutedEventArgs e)
         {
             tempclub = new Club(0, "", "", "MissLogo.jpg", "", 0, 0, 0, 0, 0, 0, 0, 0, "Red", "83330.jpg");
@@ -266,6 +254,20 @@ namespace GUI
             this.Dialoghost_AddNewClub.DataContext = tempclub;
         }
         //confirm and add new club or edited club infor
+        public void PostClub(Club cl)
+        {
+            ClubsDTO clubsDTO = new ClubsDTO();
+            clubsDTO.ClubName = cl.ClubName;
+            //clubsDTO.CoverImage = cl.CoverImage;
+            //clubsDTO.Drawn = cl.Drawn;
+            //clubsDTO.Ga = cl.GA;
+            //clubsDTO.Gd = cl.GD;
+            //clubsDTO.Gf = cl.GF;
+            //clubsDTO.LeagueKey = LeagueKey;
+            clubsDTO.Manager = cl.Manager;
+            clubsDTO.Stadium = cl.Stadium;
+            Client.Instance.Post("api/clubs", clubsDTO);
+        }
         private void Btn_Confirm_Click(object sender, RoutedEventArgs e)
         {
             BindingExpression im = Club_Cover_New.GetBindingExpression(Image.SourceProperty);
@@ -279,16 +281,13 @@ namespace GUI
             BindingExpression stadium = Txb_Stadium.GetBindingExpression(TextBox.TextProperty);
             stadium.UpdateSource();
             MyNewLeague.ListClub.Add(tempclub);
+            //PostClub(tempclub);
             CollectionViewSource.GetDefaultView(Club_List_Box.ItemsSource).Refresh();
         }
-
-
-
         private void Btn_Cancel_Click(object sender, RoutedEventArgs e)
         {
             this.Dialoghost_AddNewClub.DataContext = null;
         }
-
         private void Club_List_Box_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if(Club_List_Box.SelectedItem == null)
@@ -304,16 +303,98 @@ namespace GUI
                 this.Btn_Add_New_Club.IsEnabled = false;
             }
         }
-
-   
-
+        public void PostAllClub(ArrayList clubs,string LeagueKey)
+        {
+            foreach(Club cl in clubs)
+            {
+                ClubsDTO clubsDTO = new ClubsDTO();
+                clubsDTO.ClubName = cl.ClubName;
+                clubsDTO.LeagueKey = LeagueKey;
+                clubsDTO.Manager = cl.Manager;
+                clubsDTO.Stadium = cl.Stadium;
+                Client.Instance.Post("api/clubs", clubsDTO);
+            }
+            //PostAllPlayer(clubs, LeagueKey);
+        }
+        public List<ClubsDTO> GetAllClubs()
+        {
+            string jsonString = Client.Instance.Get("api/clubs");
+            var Data = DTO.ClubsDTO.FromJson(jsonString);
+            foreach(KeyValuePair<string, ClubsDTO> value in Data)
+            {
+                value.Value._Key = value.Key;
+            }
+            return Data.Select(kvp => kvp.Value).ToList();
+        }
+        public void PostAllPlayer(ArrayList listClub,string LeagueKey)
+        {
+            Thread.Sleep(1000);
+            List<ClubsDTO> clubs = GetAllClubs();
+            foreach (ClubsDTO c in clubs)
+            {
+                foreach(Club club in listClub)
+                {
+                    if(c.LeagueKey == LeagueKey && c.ClubName == club.ClubName)
+                    {
+                        foreach(Player p in club.ListPlayer)
+                        {
+                            PlayersDTO player = new PlayersDTO();
+                            player.AllGoal = p.AllGoal;
+                            player.ClubKey = c._Key;
+                            player.DoB = p.DoB.ToString();
+                            player.Image = p.Image;
+                            player.Name = p.PlayerName;
+                            player.Nationality = p.Nationality;
+                            player.Number = p.Number;
+                            player.Position = p.Position;
+                            Client.Instance.Post("api/players", player);
+                        }
+                    }
+                }
+            }
+        }
+        public string GetLeagueKey()
+        {
+            Thread.Sleep(1000);
+            string jsonString =  Client.Instance.Get("api/leagues");
+            var Data = DTO.LeaguesDto.FromJson(jsonString);
+            return Data.Keys.Last();
+        }
         private void Btn_Active_League_Click(object sender, RoutedEventArgs e)
         {
-            
             ((Grid)this.Parent).Children.Remove(this);
             this.MyNewLeague.IsActive = true;
+            //
+            LeaguesDto league = new LeaguesDto();
+            league.LeagueName = this.MyNewLeague.LeagueName;
+            league.Logo = this.mynewleague.Logo;
+            league.Nationality = this.MyNewLeague.Nationality;
+            league.NumClub = this.MyNewLeague.NumClub;
+            Client.Instance.Post("api/leagues", league);
+            // Lưu tất cả các đội đã thêm ở trên
+            string key = GetLeagueKey();
+            PostAllClub(MyNewLeague.ListClub, key);
+            //Lưu tất cả các cầu thủ được thêm từ các đội
+            PostAllPlayer(this.MyNewLeague.ListClub,key);
         }
-
-       
+        //tạo 1 rule mới gán bằng MynewLeague.Rule
+        //Setting setting = new Setting();
+        //setting.DrawPoint = this.MyNewLeague.Rule.DrawPoint;
+        //setting.LossPoint = this.MyNewLeague.Rule.LossPoint;
+        //setting.MaxAge = this.MyNewLeague.Rule.MaxAge;
+        //setting.MaxForeign = this.MyNewLeague.Rule.MaxForeign;
+        //setting.MaxSquadSize = this.MyNewLeague.Rule.MaxSquadSize;
+        //setting.MaxStoppageTime = this.MyNewLeague.Rule.MaxStoppageTime;
+        //setting.MinAge = this.MyNewLeague.Rule.MinAge;
+        //setting.MinSquadSize = this.MyNewLeague.Rule.MinSquadSize;
+        //setting.Priority = this.MyNewLeague.Rule.Priority;
+        //setting.Stoppage = this.MyNewLeague.Rule.Stoppage;
+        //setting.WinPoint = this.MyNewLeague.Rule.WinPoint;
+        ////Lưu Rule và gán RuleKey cho league
+        //Client.Instance.Post("api/rules", setting);
+        //string jsonString = Client.Instance.Get("api/rules");
+        //var Data = DTO.RulesDTO.FromJson(jsonString);
+        //league.RuleKey = Data.Values.Last()._Key;
+        //Lưu League
     }
 }

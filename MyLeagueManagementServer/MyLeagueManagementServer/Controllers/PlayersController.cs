@@ -29,8 +29,8 @@ namespace MyLeagueManagementServer.Controllers
         {
             connect.ConnectFirebase();
             PlayersBUS players = new PlayersBUS();
-            string jsonData = @"{'ID':'" + player.ID + "','Name':'" + player.Name + "','DoB':'" + player.DoB + "','Key_Type':'" + player.Key_Type + "','AllGoal':'" + player.AllGoal + "','Teams_Key':'" + 
-                player.Teams_Key + "','Position':'"+player.Position+ "','Nationality':'"+player.Nationality+"','Image':'"+player.Image +"','Number':'"+player.Number+ "'}";
+            string jsonData = @"{'_Key':'" + player._Key + "','Name':'" + player.Name + "','DoB':'" + player.DoB + "','AllGoal':'" + player.AllGoal + "','ClubKey':'" +
+                 player.ClubKey + "','Position':'" + player.Position + "','Nationality':'" + player.Nationality + "','Image':'" + player.Image + "','Number':'" + player.Number + "'}";
             players.post(ref jsonData);
             return Ok(player);
         }
@@ -39,9 +39,9 @@ namespace MyLeagueManagementServer.Controllers
         {
             connect.ConnectFirebase();
             PlayersBUS players = new PlayersBUS();
-            string jsonData = @"{'ID':'" + player.ID + "','Name':'" + player.Name + "','DoB':'" + player.DoB + "','Key_Type':'" + player.Key_Type + "','AllGoal':'" + player.AllGoal + "','Teams_Key':'" +
-                player.Teams_Key + "','Position':'" + player.Position + "','Nationality':'" + player.Nationality + "','Image':'" + player.Image + "','Number':'" + player.Number + "'}";
-            players.put(ref jsonData,player.Teams_Key);
+            string jsonData = @"{'_Key':'" + player._Key + "','Name':'" + player.Name + "','DoB':'" + player.DoB + "','AllGoal':'" + player.AllGoal + "','ClubKey':'" +
+                player.ClubKey + "','Position':'" + player.Position + "','Nationality':'" + player.Nationality + "','Image':'" + player.Image + "','Number':'" + player.Number + "'}";
+            players.put(ref jsonData,player._Key);
             return Ok(player);
         }
     }

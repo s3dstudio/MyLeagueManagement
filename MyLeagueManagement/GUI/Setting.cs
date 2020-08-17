@@ -177,7 +177,6 @@ namespace GUI
                 }
             }
         }
-
         public Setting()
         {
             this.MinAge = 16;
